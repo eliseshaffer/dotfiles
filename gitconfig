@@ -5,10 +5,10 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 [push]
-  default = simple
+	default = simple
 [status]
-  short = true
-  branch = true
+	short = true
+	branch = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
