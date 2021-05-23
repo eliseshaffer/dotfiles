@@ -1,0 +1,72 @@
+#! /bin/bash -ex
+
+function mkdir
+{
+  command mkdir "$1" && cd "$1"
+}
+
+function myreadlink() {
+  (
+  cd "$(find ~/ -name "$1")"        # or  cd ${1%/*}
+  echo "$PWD/$(basename "$1")" # or  echo $PWD/${1##*/}
+  )
+}
+
+# Finds first direction matchern pattern in ${1} and cd's to it
+function app() {
+    APP_DIRECTORY="$(find "${CODE_HOME}" -name "${1}" -maxdepth 2 )"
+    APP_DIRECTORY="${APP_DIRECTORY%%$'\n'*}"
+    if [[ ${APP_DIRECTORY} == "" ]]; then
+        echo "App doesn't exist"
+    else
+        echo "Switching to app directory: ${APP_DIRECTORY}"
+        cd "${APP_DIRECTORY}"
+    fi
+}
+
+it2prof() {
+  echo -e "\033]50;SetProfile=$1\a"
+}
+
+function switchtheme() {
+  echo "Switching Theme to: ${1}"
+
+  it2prof "${1}"
+  export COLOR="$1"
+}
+
+function toggle_profile() {
+  if [[ ${COLOR} == "dark" ]]; then
+    switchtheme light
+  else
+    switchtheme dark
+  fi
+}
+
+function wip() {
+  git add . && git commit -m "WIP: ${1}"
+}
+
+function git_clone_and_cd() {
+  directory=$( echo "${1}" | awk -F/ '{print $NF}' )
+  directory=${directory%.*}
+  echo "${directory}"
+  git clone "${1}" && cd "$directory"
+}
+alias gcl=git_clone_and_cd
+
+function code_dirs() {
+  find "$HOME/code" -type d -maxdepth 2 -mindepth 1 | grep -vE '.*dotfiles.*' | grep -vE '^\\.'
+}
+
+function _appcmp() {
+  for file in "$(code_dirs)"; do
+    compadd $(echo "$file" | cut -d/ -f5-5)
+  done
+}
+
+
+function _gitcheckoutbranch(){
+  git checkout -b "${1}" && git push -u origin "${1}"
+}
+

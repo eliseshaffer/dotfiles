@@ -1,0 +1,6 @@
+.DS_Store
+*tags*
+.vim-session
+Session.vim
+.vscode/
+*.code-workspace
