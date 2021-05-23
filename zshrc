@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="amuse"
 DISABLE_AUTO_TITLE="true"
 
-plugins=(brew chruby sudo vagrant z git)
+plugins=(brew chruby sudo vagrant z git nvm)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh_functions
 source $ZSH/oh-my-zsh.sh
@@ -26,7 +26,7 @@ function precmd {
 [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
 
 export PROMPT='
-%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) 💎 $(ruby_prompt_info)  ⏰  %{$fg_bold[red]%}%*%{$reset_color%}
+%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_prompt_info)%{$reset_color%}  %{$fg_bold[green]%} $(nvm version)%{$reset_color%}  %{$fg_bold[magenta]%} %@%{$reset_color%}
 %1{🌸%}  '
 
 export RPROMPT=''
