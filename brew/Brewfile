@@ -13,7 +13,6 @@ brew "zsh-completions"
 
 # Development Stuff
 brew "vim"
-brew "emacs"
 brew "chruby"
 brew "ruby-install"
 brew 'nodejs'
