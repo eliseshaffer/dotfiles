@@ -37,3 +37,4 @@ export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm

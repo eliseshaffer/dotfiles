@@ -17,6 +17,7 @@ brew "chruby"
 brew "ruby-install"
 brew 'nodejs'
 brew 'npm'
+brew 'nvm'
 brew 'yarn'
 brew 'sqlite'
 brew 'jq'
