@@ -20,3 +20,8 @@ scripts/install.sh
 1. Remap Ctrl-R to Ignore in iTerm settings.
 1. Download Magnet from the MAS.
 1. Install the itermcolors/presets in the itermcolors folder.
+
+Optional:
+
+1. Add `/usr/local/bin/zsh` to `/etc/shells`
+1. `chsh -s /usr/local/bin/zsh`
