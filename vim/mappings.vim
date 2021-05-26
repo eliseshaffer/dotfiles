@@ -3,13 +3,6 @@
 let mapleader = ","
 set mouse=a
 
-" Wrap visual selectiosn with chars
-vnoremap ( "zdi(<C-R>z)<ESC>
-vnoremap { "zdi{<C-R>z}<ESC>
-vnoremap [ "zdi[<C-R>z]<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
-vnoremap " 'zdi"<C-R>z'<ESC>
-
 " Line movement
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
@@ -46,6 +39,7 @@ nnoremap <Leader>C :set cursorline! cursorcolumn!<CR>
 
 "" Aliases
 ia rpry require 'pry'; binding.pry
+ia pry binding.pry
 
 " ,c => copy to clipboard “*
 vmap <leader>c "*y<CR>
@@ -64,3 +58,7 @@ map <leader>wo :tabo<CR>
 " Colorswitch
 nmap <leader>kt :ColorSwitch<CR>
 
+" Git maps
+nmap <leader>gb :Gina blame<CR>
+nmap <leader>gc :GetCurrentCommitLink<CR>
+vmap <leader>gc :GetCurrentCommitLink<CR>

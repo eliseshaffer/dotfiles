@@ -11,7 +11,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-haml'
 Plug 'ervandew/supertab'
-Plug 'airblade/vim-gitgutter'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'mhinz/vim-startify'
@@ -23,7 +22,6 @@ Plug 'wincent/terminus'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'lambdalisue/gina.vim'
 
 " Colorschemes
 Plug 'jpo/vim-railscasts-theme'
@@ -42,6 +40,11 @@ Plug 'tpope/vim-surround'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/syntastic'
 Plug 'mattn/emmet-vim'
+
+" Git tools
+Plug 'knsh14/vim-github-link'
+Plug 'lambdalisue/gina.vim'
+Plug 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call plug#end()
