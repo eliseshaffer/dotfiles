@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins listed here
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-rails'
+Plug 'eliseshaffer/vim-rails', { 'branch': 'minitest-rails-syntax' }
 Plug 'tpope/vim-haml'
 Plug 'ervandew/supertab'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -40,6 +40,7 @@ Plug 'tpope/vim-surround'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/syntastic'
 Plug 'mattn/emmet-vim'
+Plug 'sunaku/vim-ruby-minitest'
 
 " Git tools
 Plug 'knsh14/vim-github-link'
