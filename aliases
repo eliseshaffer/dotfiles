@@ -10,6 +10,7 @@ function mkdir
 }
 
 alias d="cd $DOTFILES"
+alias dotfiles="app dotfiles"
 
 alias ll="ls $ls_options"
 alias la="ls $ls_options -a"
@@ -51,7 +52,6 @@ alias be='bundle exec'
 # Rspec
 alias respect='bundle exec rspec'
 alias ber='bundle exec rspec'
-alias wipit='be rspec -t @wip'
 
 # Run the specs and push if successful
 alias rpush='rspec --fail-fast && git push'
@@ -71,45 +71,17 @@ alias nrd='npm run dev'
 alias nt='npm run test'
 
 # Apps
-#alias nv='nvim'
 alias v='vim'
 alias vi='vim'
-#alias vim='vim'
 
-# Ceedling
-alias rr="rake release"
-alias rc="rake clobber"
-alias rta="rake test:all"
-alias db="rr && arm-none-eabi-gdb"
-alias dbs="./start_GdbServer.sh"
-
-# vagrant
-alias vup="vagrant up"
-alias vsh="vagrant ssh"
-alias vhalt="vagrant halt"
-alias vsp="vagrant suspend"
-alias vs="vagrant status"
-
-# Ghost Dev
-alias sasswatch="sass --watch assets/sass/input.scss:assets/css/output.css"
-
-# Wrap crazy MAC replacements
+# Alias mac utilities to familiar names
 case "$(uname)" in
   *Darwin*) alias lsusb="system_profiler SPUSBDataType"
+    alias flushdns="sudo killall -HUP mDNSResponder"
     alias lspci="ioreg -l | grep pci"
     alias updatedb="sudo /usr/libexec/locate.updatedb"
     ;;
 esac
-
-# ansible
-alias agi="ansible-galaxy install -r requirements.yml -p roles/"
-
-# crazy mac stuff
-alias flushdns="sudo killall -HUP mDNSResponder"
-
-# theme switching
-alias light="switchtheme light"
-alias dark="switchtheme dark"
 
 # postgres
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -120,6 +92,7 @@ alias pgfix="rm /usr/local/var/postgres/postmaster.pid"
 alias h="heroku"
 alias hr="heroku run"
 
+# theme switching
 alias light="switchtheme light"
 alias dark="switchtheme dark"
 alias kt="toggle_profile"
