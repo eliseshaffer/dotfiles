@@ -43,7 +43,7 @@ function toggle_profile() {
   fi
 }
 
-function wip() {
+function draft() {
   git add . && git commit -m "WIP: ${1}"
 }
 
