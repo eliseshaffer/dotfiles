@@ -44,7 +44,7 @@ alias gru="git remote update"
 alias gdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gdo='git branch | grep -v "\*" | xargs -n 1 git branch -D'
 alias grpo='git remote prune origin'
-alias gp='git pull'
+alias gp='git pull --rebase'
 
 # Bundler
 alias be='bundle exec'
