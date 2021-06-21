@@ -45,6 +45,7 @@ alias gdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gdo='git branch | grep -v "\*" | xargs -n 1 git branch -D'
 alias grpo='git remote prune origin'
 alias gp='git pull --rebase'
+alias gacm='git add . && git commit -m'
 
 # Bundler
 alias be='bundle exec'
