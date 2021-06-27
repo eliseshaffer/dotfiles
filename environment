@@ -21,7 +21,7 @@ export CODE_HOME="${HOME}/code"
 export COLOR="dark"
 export HOMEBREW_BUNDLE_NO_LOCK=true
 
-export FZF_DEFAULT_COMMAND='ag --ignore node_modules/ --ignore .git/ -g ""'
-#export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAN"
+export FZF_DEFAULT_COMMAND='ag --ignore node_modules/ --ignore .git/ --hidden -g ""'
+#export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
