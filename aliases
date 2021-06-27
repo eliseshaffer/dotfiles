@@ -56,6 +56,8 @@ alias ber='bundle exec rspec'
 
 # Run the specs and push if successful
 alias rpush='rspec --fail-fast && git push'
+alias rta='bin/rails test && bin/rails test:system'
+alias rtap='rta && git push'
 
 # Rails
 alias r='bundle exec rails s'
