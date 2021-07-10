@@ -44,7 +44,7 @@ function toggle_profile() {
 }
 
 function draft() {
-  git add . && git commit -m "WIP: ${1}"
+  git add . && git commit -m "DRAFT: ${1}"
 }
 
 function git_clone_and_cd() {
