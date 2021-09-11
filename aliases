@@ -54,15 +54,12 @@ alias be='bundle exec'
 alias respect='bundle exec rspec'
 alias ber='bundle exec rspec'
 
-# Run the specs and push if successful
-alias rpush='rspec --fail-fast && git push'
-alias rta='bin/rails test && bin/rails test:system'
-alias rtap='rta && git push'
-
 # Rails
-alias r='bundle exec rails s'
-alias rspec='rspec -c'
+alias r='rails'
+alias rta='bin/rails test && bin/rails test:system'
 alias migrate='bundle exec rake db:migrate && bundle exec rake test:prepare'
+alias rtap='rta && git push'
+alias rspec='rspec -c'
 alias rtc='bundle exec rails test:controllers'
 alias rtm='bundle exec rails test:models'
 alias rt='bundle exec rails test'
