@@ -4,10 +4,11 @@ case "$(uname)" in
   *) ls_options=-lh ;;
 esac
 
-function mkdir
+function mkdir_and_cd()
 {
   command mkdir $1 && cd $1
 }
+alias mkdir='mkdir_and_cd'
 
 alias d="cd $DOTFILES"
 alias dotfiles="app dotfiles"
