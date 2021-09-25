@@ -4,6 +4,8 @@ pushd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 #set -e
 
+. ./zsh_functions
+
 EXCLUDES="completion|script|brew|README.md"
 
 install_brew () {
@@ -42,10 +44,9 @@ install_ruby () {
   ruby-install $(cat ~/.ruby-version)
 }
 
-pushd brew
- install_brew
- brew bundle
-popd
+install_brew
+pick_brewfile
+brew bundle --file "$HOME/Brewfile"
 
 install_oh_my_zsh
 install_dotfiles
