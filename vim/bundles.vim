@@ -10,7 +10,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'eliseshaffer/vim-rails', { 'branch': 'minitest-rails-syntax' }
 Plug 'tpope/vim-haml'
-Plug 'ervandew/supertab'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'mhinz/vim-startify'
@@ -46,6 +45,15 @@ Plug 'sunaku/vim-ruby-minitest'
 Plug 'knsh14/vim-github-link'
 Plug 'lambdalisue/gina.vim'
 Plug 'airblade/vim-gitgutter'
+
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig' " Language Server
+  Plug 'hrsh7th/nvim-compe' " Completions
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'rafamadriz/friendly-snippets'
+else
+  Plug 'ervandew/supertab'
+endif
 
 " All of your Plugins must be added before the following line
 call plug#end()

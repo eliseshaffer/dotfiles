@@ -139,3 +139,14 @@ endif
 if filereadable(expand('~/.vim/plugconfig/fzf.vim'))
     source ~/.vim/plugconfig/fzf.vim
 endif
+
+if has('nvim')
+    if filereadable(expand('~/.vim/plugconfig/nvim-lspconfig.lua'))
+        source ~/.vim/plugconfig/nvim-lspconfig.lua
+    endif
+    if filereadable(expand('~/.vim/plugconfig/compe.lua'))
+        source ~/.vim/plugconfig/compe.lua
+    endif
+endif
+
+nnoremap <silent> <leader> :<c-u>WhichKey  ','<CR>
