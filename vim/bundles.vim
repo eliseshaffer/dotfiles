@@ -30,7 +30,7 @@ Plug 'ryanoasis/vim-devicons'
 " Formatting
 Plug 'luochen1990/rainbow'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
-Plug 'godlygeek/tabular'
+"Plug 'godlygeek/tabular'
 
 " Syntax Plugins
 Plug 'sheerun/vim-polyglot'
@@ -49,8 +49,8 @@ Plug 'airblade/vim-gitgutter'
 if has('nvim')
   Plug 'neovim/nvim-lspconfig' " Language Server
   Plug 'hrsh7th/nvim-compe' " Completions
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'rafamadriz/friendly-snippets'
+  Plug 'hrsh7th/vim-vsnip' " Snippet support
+  Plug 'rafamadriz/friendly-snippets' " Some useful snippets
 else
   Plug 'ervandew/supertab'
 endif
