@@ -147,6 +147,9 @@ if has('nvim')
     if filereadable(expand('~/.vim/plugconfig/compe.lua'))
         source ~/.vim/plugconfig/compe.lua
     endif
+    if filereadable(expand('~/.vim/plugconfig/blamer.vim'))
+        source ~/.vim/plugconfig/blamer.vim
+    endif
 endif
 
-nnoremap <silent> <leader> :<c-u>WhichKey  ','<CR>
+"nnoremap <silent> <leader> :<c-u>WhichKey  ','<CR>

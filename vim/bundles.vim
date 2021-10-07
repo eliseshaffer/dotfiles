@@ -14,7 +14,7 @@ Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Townk/vim-autoclose'
-Plug 'benizi/vim-automkdir'
+"Plug 'benizi/vim-automkdir'
 Plug 'wincent/terminus' " Changes cursor and enables mouse in all modes
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
@@ -32,8 +32,8 @@ Plug 'vim-scripts/DeleteTrailingWhitespace'
 " Syntax Plugins
 Plug 'sheerun/vim-polyglot'
 Plug 'eliseshaffer/vim-rails', { 'branch': 'minitest-rails-syntax' }
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise' " Auto-insert end in ruby
+Plug 'tpope/vim-surround' " Adds changing/deleting surrounding chars
 Plug 'mattn/emmet-vim'
 Plug 'sunaku/vim-ruby-minitest'
 
@@ -47,6 +47,7 @@ if has('nvim')
   Plug 'hrsh7th/nvim-compe' " Completions
   Plug 'hrsh7th/vim-vsnip' " Snippet support
   Plug 'rafamadriz/friendly-snippets' " Some useful snippets
+  Plug 'APZelos/blamer.nvim' " Blame virtual text
 else
   Plug 'scrooloose/syntastic'
   Plug 'ervandew/supertab'
