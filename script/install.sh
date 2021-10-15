@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 pushd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
+export DOTFILES_ROOT=$(pwd -P)
 #set -e
 
 . ./zsh_functions
