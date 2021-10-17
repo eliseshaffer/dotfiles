@@ -6,7 +6,7 @@ function myreadlink() {
 }
 
 pick_brewfile() {
-  echo "Please select the file from the list"
+  echo "Please select the file from the list:"
 
   files=($(ls brew/*.brewfile))
   files+=('New')

@@ -1,6 +1,6 @@
 " Place your keybindings here
 " ==== Controls
-let mapleader = " "
+let mapleader = ","
 set mouse=a
 
 " Line movement

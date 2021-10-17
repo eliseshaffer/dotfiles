@@ -9,19 +9,19 @@ export DOTFILES_ROOT=$(pwd -P)
 EXCLUDES="completion|script|brew|README.md"
 
 install_brew () {
-  echo 'installing homebrew'
+  echo 'Installing homebrew'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
   brew tap Homebrew/bundle
 }
 
 install_oh_my_zsh() {
-  echo "installing oh-my-zsh"
+  echo "Installing oh-my-zsh"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 }
 
 install_dotfiles () {
-  echo 'linking dotfiles'
+  echo 'Linking dotfiles'
 
   dotfiles=$(find . -maxdepth 1 -name "*" -print | sed "s/.\///" | grep "^\w" |
             grep -E -v $EXCLUDES)
