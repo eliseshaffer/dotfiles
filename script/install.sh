@@ -38,6 +38,7 @@ install_dotfiles () {
 configure_control_esc () {
   pushd ~/.hammerspoon/Spoons/ControlEscape.spoon/
   /bin/bash script/setup
+  popd
 }
 
 install_ruby () {
@@ -53,4 +54,3 @@ install_dotfiles
 install_ruby
 configure_control_esc
 
-popd
