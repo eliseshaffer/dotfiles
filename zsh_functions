@@ -26,7 +26,7 @@ pick_brewfile() {
 
 create_brewfile() {
   echo "TODO: This feature isn't ready yet."
-  echo "Please create the file in DOTFILES/brew/ and run again."
+  echo "Please create the file in $DOTFILES/brew/ and run again."
 }
 
 link_brewfile() {

@@ -13,6 +13,7 @@ brew "zsh-completions"
 
 # Development Stuff
 brew "vim"
+brew "neovim"
 brew "chruby"
 brew "ruby-install"
 brew 'nodejs'
@@ -31,7 +32,6 @@ brew 'libxml2'
 cask 'flutter'
 brew 'imagemagick'
 brew 'ctags'
-#brew 'vips' This is taking far too long to install
 
 #utilities
 brew "wget"
@@ -49,14 +49,11 @@ cask 'discord'
 cask 'visual-studio-code'
 cask 'hammerspoon'
 cask 'paw'
-cask 'karabiner-elements'
-cask 'fliqlo'
 cask 'firefox'
 cask 'microsoft-edge'
 cask 'hey'
 cask 'sqlpro-studio'
 cask 'paw'
-cask 'signal'
 cask 'dash'
 cask '1password'
 

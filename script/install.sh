@@ -51,7 +51,6 @@ brew bundle --file "$HOME/Brewfile"
 install_oh_my_zsh
 install_dotfiles
 install_ruby
-#configure_vim
 configure_control_esc
 
 popd
