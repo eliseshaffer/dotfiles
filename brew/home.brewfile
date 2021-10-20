@@ -37,7 +37,6 @@ brew 'ctags'
 brew "wget"
 brew "fzf"
 brew "ag"
-brew "ranger"
 
 # Applications
 cask 'google-chrome'

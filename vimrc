@@ -104,6 +104,10 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+if !has_key(g:polyglot_is_disabled, 'brewfile')
+  au BufNewFile,BufRead *.brewfile setf brewfile
+endif
+
 " ==== Plugins
 " Airline (better Powerline)
 if filereadable(expand('~/.vim/plugconfig/airline.vim'))
