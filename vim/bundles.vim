@@ -22,6 +22,7 @@ Plug 'junegunn/fzf.vim'
 
 " Colorschemes
 Plug 'eliseshaffer/vim-one'
+Plug 'dracula/vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Formatting
