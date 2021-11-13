@@ -2,16 +2,17 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="amuse"
 DISABLE_AUTO_TITLE="true"
+export HOMEBREW_DIR="/opt/homebrew"
 
 plugins=(brew chruby sudo vagrant z git nvm)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh_functions
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.environment
 
-if [[ -f "/opt/homebrew/opt/chruby/share/chruby/chruby.sh" ]]; then
-    source "/opt/homebrew/opt/chruby/share/chruby/chruby.sh"
+if [[ -f "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh" ]]; then
+    source "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh"
 fi
 
 # Update tab title in iterm to current directory
@@ -32,12 +33,12 @@ export RPROMPT=''
 
 compdef _appcmp app
 
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+export PATH="$HOMEBREW_DIR/opt/postgresql@10/bin:$PATH"
 
-export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+export ANDROID_SDK_ROOT="$HOMEBREW_DIR/share/android-sdk"
+export PATH="$HOMEBREW_DIR/opt/libxml2/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_DIR/opt/nvm/nvm.sh" ] && . "$HOMEBREW_DIR/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
