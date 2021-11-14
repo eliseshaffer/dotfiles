@@ -21,6 +21,7 @@ nm <leader>f :Files<CR>
 nn <silent> <C-l> :nohls<CR><C-l>
 
 map <leader>bt :NERDTreeToggle<cr>
+map <leader>ft :NERDTreeToggle<cr>
 nmap <leader>tn :TestNearest<cr>
 nmap <leader>tf :TestFile<cr>
 nmap <leader>ta :TestSuite<cr>
@@ -51,7 +52,7 @@ map <leader>v "*p
 map <leader>p "0p""
 
 " tab stuff
-map <leader>w :bd<CR>
+map <leader>wd :bd<CR>
 map <leader>wt :tabc<CR>
 map <leader>wo :tabo<CR>
 
@@ -62,6 +63,7 @@ nmap <leader>kt :ColorSwitch<CR>
 nmap <leader>gb :Gina blame<CR>
 nmap <leader>gc :GetCurrentCommitLink<CR>
 vmap <leader>gc :GetCurrentCommitLink<CR>
+
 if has('nvim')
   nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
