@@ -13,6 +13,7 @@ source $HOME/.environment
 
 if [[ -f "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh" ]]; then
     source "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh"
+    source "$HOMEBREW_DIR/share/chruby/auto.sh"
 fi
 
 # Update tab title in iterm to current directory

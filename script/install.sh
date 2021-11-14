@@ -33,6 +33,8 @@ install_dotfiles () {
     ln -sFfn "$target" "$dst"
     echo "ln -sFfn $target $dst"
   done
+
+  ln -sFfn "$DOTFILES_ROOT/config/" "~/.config"
 }
 
 configure_control_esc () {
