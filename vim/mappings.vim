@@ -14,13 +14,12 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 " <leader>n = CtrlP from current file's directory
 nm <C-p> :Files<CR>
 nm <leader>s :Ag<CR>
-nm <leader>f :Files<CR>
+nm <leader>ff :Files<CR>
 "nmap <leader>v :tabedit $MYVIMRC<CR>
 
 "" Reset search highlighting when refreshing the screen (Ctrl+l)
 nn <silent> <C-l> :nohls<CR><C-l>
 
-map <leader>bt :NERDTreeToggle<cr>
 map <leader>ft :NERDTreeToggle<cr>
 nmap <leader>tn :TestNearest<cr>
 nmap <leader>tf :TestFile<cr>
