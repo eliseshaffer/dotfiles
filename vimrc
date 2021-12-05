@@ -57,9 +57,15 @@ set smartcase
 set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
+function s:format_and_save()
+  lua vim.lsp.buf.formatting_sync(nil, 1000)
+  :wa
+endfunction
+
 aug Filestuff
-    :au CursorHold * silent! :wa
-    :au InsertLeave * silent! :DeleteTrailingWhitespace | :wa "| :SyntasticCheck
+    :au CursorHold * silent! :call s:format_and_save()
+    autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)
+    :au InsertLeave * silent! :call s:format_and_save()
     :au CursorHold * checktime
 aug END
 
@@ -78,6 +84,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set showtabline=2
 
 " Special settings based on language
+autocmd BufRead,BufNewFile * setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 autocmd BufRead,BufNewFile * setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 
 " ==== Meta-vim
