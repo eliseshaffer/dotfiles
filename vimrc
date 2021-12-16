@@ -58,6 +58,7 @@ set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
 function s:format_and_save()
+  checktime
   lua vim.lsp.buf.formatting_sync(nil, 1000)
   :wa
 endfunction
