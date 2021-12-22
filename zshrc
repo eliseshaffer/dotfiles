@@ -2,7 +2,11 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="amuse"
 DISABLE_AUTO_TITLE="true"
-export HOMEBREW_DIR="/opt/homebrew"
+if [[ $(uname -m) = "x86_64" ]]; then
+  export HOMEBREW_DIR="/usr/local"
+else
+  export HOMEBREW_DIR="/opt/homebrew"
+fi
 
 plugins=(brew chruby sudo vagrant z git nvm)
 source $HOMEBREW_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,8 +44,8 @@ export ANDROID_SDK_ROOT="$HOMEBREW_DIR/share/android-sdk"
 export PATH="$HOMEBREW_DIR/opt/libxml2/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_DIR/opt/nvm/nvm.sh" ] && . "$HOMEBREW_DIR/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+[ -s "$HOMEBREW_DIR/opt/nvm/etc/bash_completion.d/nvm" ] && . "$HOMEBREW_DIR/opt/nvm/etc/bash_completion.d/nvm"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$($HOMEBREW_DIR/bin/brew shellenv)"
 
 ssh-add -K
