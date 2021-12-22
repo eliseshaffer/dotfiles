@@ -1,8 +1,8 @@
 cask_args appdir: '/Applications'
 
 #taps
+tap "homebrew/cask"
 tap "heroku/brew"
-tap "fbsb/flutter"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
 
@@ -11,61 +11,63 @@ brew "zsh"
 brew "zsh-syntax-highlighting"
 brew "zsh-completions"
 
+# drivers
+cask "logitech-options"
+cask "logitech-camera-settings"
+
 # Development Stuff
 brew "vim"
 brew "neovim"
-brew "chruby"
-brew "ruby-install"
+# brew "chruby"
+# brew "ruby-install"
 brew 'nodejs'
 brew 'npm'
-brew 'nvm'
 brew 'yarn'
 brew 'sqlite'
 brew 'jq'
 brew 'git'
 brew 'git-lfs'
-brew 'httpie'
-brew 'heroku'
 brew 'postgresql'
 brew 'redis'
 brew 'libxml2'
-cask 'flutter'
-brew 'imagemagick'
-brew 'ctags'
-#brew 'vips' This is taking far too long to install
+brew 'fzf'
 
 #utilities
 brew "wget"
-brew "fzf"
 brew "ag"
-brew "ranger"
 
 # Applications
-cask 'google-chrome'
 cask 'iterm2'
 cask 'chromedriver'
-cask 'android-studio'
-cask 'java'
-cask 'discord'
 cask 'visual-studio-code'
-cask 'hammerspoon'
-cask 'paw'
-cask 'karabiner-elements'
-cask 'fliqlo'
-cask 'firefox'
-cask 'microsoft-edge'
-cask 'hey'
 cask 'sqlpro-studio'
 cask 'paw'
-cask 'signal'
-cask 'dash'
 cask '1password'
+cask 'viscosity'
 
 # Drivers
 cask 'logitech-options'
 cask 'logitech-camera-settings'
+cask 'docker'
+# cask 'little-snitch'
+cask 'micro-snitch'
 
 # Fonts
 cask "font-fira-code"
-cask 'font-fira-code-nerd-font'
-cask 'font-source-sans-pro'
+cask "font-fira-code-nerd-font"
+
+# Red Canary
+brew "sops"
+brew "awscli"
+brew "kubernetes-cli"
+brew "aws-iam-authenticator"
+brew "terraform"
+brew "tfenv"
+
+# terraform stuff
+brew "pre-commit"
+brew "tfsec"
+brew "coreutils"
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"
+
