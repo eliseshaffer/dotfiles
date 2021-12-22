@@ -66,6 +66,11 @@ function toggle_profile() {
   fi
 }
 
+function ruby_version() {
+  ruby --version | cut -d ' ' -f1-2 | sed 's/\ /-/'
+  #echo 'ruby-2.6.7'
+}
+
 function draft() {
   git add . && git commit -m "DRAFT: ${1}"
 }
