@@ -43,3 +43,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+ssh-add -K
