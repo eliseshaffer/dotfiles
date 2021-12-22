@@ -60,6 +60,7 @@ set noeb vb t_vb=
 function s:format_and_save()
   checktime
   lua vim.lsp.buf.formatting_sync(nil, 1000)
+  :EslintFixAll
   :wa
 endfunction
 
