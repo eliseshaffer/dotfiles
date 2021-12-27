@@ -47,6 +47,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_DIR/opt/nvm/etc/bash_completion.d/nvm" ] && . "$HOMEBREW_DIR/opt/nvm/etc/bash_completion.d/nvm"
 
 eval "$($HOMEBREW_DIR/bin/brew shellenv)"
-[[ -f ~/.zshrc.private ]] && source ~/.zshrc.private
 
 ssh-add --apple-use-keychain
+
+[[ -f ~/.overrides ]] && source ~/.overrides
