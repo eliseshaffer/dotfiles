@@ -49,4 +49,4 @@ export NVM_DIR="$HOME/.nvm"
 eval "$($HOMEBREW_DIR/bin/brew shellenv)"
 [[ -f ~/.zshrc.private ]] && source ~/.zshrc.private
 
-ssh-add -K
+ssh-add --apple-use-keychain
