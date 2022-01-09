@@ -16,7 +16,6 @@ brew "vim"
 brew "neovim"
 brew "chruby"
 brew "ruby-install"
-brew 'nodejs'
 brew 'npm'
 brew 'nvm'
 brew 'yarn'
