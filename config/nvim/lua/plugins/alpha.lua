@@ -37,6 +37,7 @@ local custom_header = {
 
 dashboard.section.buttons.val = {
   button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+  button("s", "  Session", ":lua require('session-lens').search_session()<CR>"),
   button("f", "  Find file", ":lua require('telescope.builtin').find_files()<CR>"),
   button("p", "  Plugins", ":e ~/.config/nvim/lua/plugins.lua<CR>"),
   button("u", "  Sync plugins", ":PackerSync<CR>"),

@@ -64,6 +64,20 @@ return require('packer').startup(function(use)
 
   -- Start Screen
   use { 'goolord/alpha-nvim', config = require('plugins.alpha') }
+  use { 'rmagatti/auto-session' }
+  require('auto-session').setup {
+    log_level = 'info',
+    -- auto_session_enabled = false,
+    auto_session_suppress_dirs = {'~/', '~/Projects'},
+    auto_restore_enabled = false,
+  }
+  use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
+  require('session-lens').setup({
+    path_display = {'shorten'},
+    previewer = false,
+    prompt_position = "bottom",
+    layout_strategy = "bottom_pane"
+  })
 
   if packer_bootstrap then
     require('packer').sync()
