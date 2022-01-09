@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   use { 'vim-test/vim-test' }
   use { "Pocco81/AutoSave.nvim", config = require('plugins.autosave') }
   use { 'fedepujol/move.nvim' }
+  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = require("plugins.gitsigns") }
 
   -- Start Screen
   use { 'goolord/alpha-nvim', config = require('plugins.alpha') }

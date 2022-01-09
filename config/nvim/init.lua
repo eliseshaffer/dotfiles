@@ -9,6 +9,7 @@ vim.o.colorcolumn = "100"
 vim.o.expandtab = true
 vim.o.softtabstop = 2
 vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 vim.o.writebackup = false
 vim.o.undofile = false
 vim.wo.number = true
@@ -108,7 +109,7 @@ key('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, si
 key('n', '<leader>gi', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true})
 key('n', '<leader>F', ':lua vim.lsp.buf.formatting()<CR>', { noremap = true, silent = true})
 key('n', '<C-k>', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap = true, silent = true})
-key('n', '<C-[>', ':lua vim.lsp.diagnostic.goto_prev()<CR>', { noremap = true, silent = true})
-key('n', '<C-]>', ':lua vim.lsp.diagnostic.goto_next()<CR>', { noremap = true, silent = true})
+-- key('n', '<C-[>', ':lua vim.lsp.diagnostic.goto_prev()<CR>', { noremap = true, silent = true})
+-- key('n', '<C-]>', ':lua vim.lsp.diagnostic.goto_next()<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
 
