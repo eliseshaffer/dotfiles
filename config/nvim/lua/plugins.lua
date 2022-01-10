@@ -3,7 +3,7 @@
 -- Plugins
 --
 -- -------------------------------------------------------------------------------------------
-vim.cmd [[packadd packer.nvim]]
+--vim.cmd [[packadd packer.nvim]]
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -17,18 +17,18 @@ end
 
 require('packer').init({max_jobs = 10})
 
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
   -- manage Packer itself
   use { 'wbthomason/packer.nvim' }
 
   -- File Management
-  use { 'kyazdani42/nvim-tree.lua', config = require('plugins.nvimtree') }
+  use { 'kyazdani42/nvim-tree.lua' }
   use { 'nvim-lua/plenary.nvim' } -- Required for telescope
-  use { 'nvim-telescope/telescope.nvim', config = require('plugins.telescope') }
+  use { 'nvim-telescope/telescope.nvim'  }
 
   -- LSP
   use { 'neovim/nvim-lspconfig' }
-  use { 'onsails/lspkind-nvim', config = require('plugins.lspkind') }
+  use { 'onsails/lspkind-nvim'  }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
   use { 'alexaandru/nvim-lspupdate' }
 
@@ -45,8 +45,8 @@ return require('packer').startup(function(use)
   use { 'p00f/nvim-ts-rainbow' }
 
   -- UI
-  -- use { 'romgrk/barbar.nvim', config = require('plugins.barbar') }
-  use { 'feline-nvim/feline.nvim', config = require('plugins.feline') }
+  -- use { 'romgrk/barbar.nvim' require('plugins.barbar') }
+  use { 'feline-nvim/feline.nvim'  }
 
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
@@ -56,30 +56,48 @@ return require('packer').startup(function(use)
   use { 'eliseshaffer/vim-one' }
 
   -- Tools
-  use { 'vim-test/vim-test', config = require('plugins.vim-test') }
-  use { "Pocco81/AutoSave.nvim", config = require('plugins.autosave') }
+  use { 'vim-test/vim-test'  }
+  use { "Pocco81/AutoSave.nvim"  }
   use { 'fedepujol/move.nvim' }
-  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = require("plugins.gitsigns") }
-  use { 'terrortylor/nvim-comment', config = require("plugins.nvim-comment") }
+  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}  }
+  use { 'terrortylor/nvim-comment'  }
 
   -- Start Screen
-  use { 'goolord/alpha-nvim', config = require('plugins.alpha') }
+  use { 'goolord/alpha-nvim'  }
   use { 'rmagatti/auto-session' }
-  require('auto-session').setup {
-    log_level = 'info',
-    -- auto_session_enabled = false,
-    auto_session_suppress_dirs = {'~/', '~/Projects'},
-    auto_restore_enabled = false,
-  }
   use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
-  require('session-lens').setup({
-    path_display = {'shorten'},
-    previewer = false,
-    prompt_position = "bottom",
-    layout_strategy = "bottom_pane"
-  })
 
   if packer_bootstrap then
     require('packer').sync()
   end
 end)
+
+-- -------------------------------------------------------------------------------------------
+--
+-- Plugin Configs
+--
+-- -------------------------------------------------------------------------------------------
+require('plugins.nvimtree')
+require('plugins.telescope')
+require('plugins.lspkind')
+require('plugins.feline')
+require('plugins.vim-test')
+require('plugins.autosave')
+require("plugins.gitsigns")
+require("plugins.nvim-comment")
+require('plugins.alpha')
+
+require('auto-session').setup {
+  log_level = 'info',
+  -- auto_session_enabled = false,
+  auto_session_suppress_dirs = {'~/', '~/Projects'},
+  auto_restore_enabled = false,
+}
+
+require('session-lens').setup({
+  path_display = {'shorten'},
+  previewer = false,
+  prompt_position = "bottom",
+  layout_strategy = "bottom_pane"
+})
+

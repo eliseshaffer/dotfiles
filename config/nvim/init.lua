@@ -26,9 +26,6 @@ if vim.fn.has("termguicolors") == 1 then
   vim.opt.termguicolors = true
 end
 
-vim.go.background = vim.env.COLOR
-vim.api.nvim_command 'colorscheme one'
-
 -- -------------------------------------------------------------------------------------------
 --
 -- Plugin Configs
@@ -37,6 +34,9 @@ vim.api.nvim_command 'colorscheme one'
 require('plugins')
 require('plugins.treesitter')
 require('lsp')
+
+vim.go.background = vim.env.COLOR
+vim.api.nvim_command 'colorscheme one'
 
 -- -------------------------------------------------------------------------------------------
 --
