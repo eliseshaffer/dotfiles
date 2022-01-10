@@ -9,7 +9,7 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 local function footer()
-	-- TODO: Figure out why this doesn't work			
+	-- TODO: Figure out why this doesn't work
   local total_plugins = "X" -- #vim.tbl_keys(packer_plugins)
   local date = os.date("%d-%m-%Y")
   local time = os.date("%H:%M:%S")
@@ -39,6 +39,7 @@ dashboard.section.buttons.val = {
   button("e", "  New file", ":ene <BAR> startinsert <CR>"),
   button("s", "  Session", ":lua require('session-lens').search_session()<CR>"),
   button("f", "  Find file", ":lua require('telescope.builtin').find_files()<CR>"),
+  button("t", "פּ  File Tree", ":NvimTreeToggle<CR>"),
   button("p", "  Plugins", ":e ~/.config/nvim/lua/plugins.lua<CR>"),
   button("u", "  Sync plugins", ":PackerSync<CR>"),
   button("q", "  Quit", "<Cmd>qa<CR>"),
