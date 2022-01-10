@@ -57,3 +57,4 @@ else
 fi
 
 [[ -f ~/.overrides ]] && source ~/.overrides
+[[ -f ~/.zshrc.private ]] && source ~/.zshrc.private
