@@ -14,6 +14,7 @@ vim.o.shiftwidth = 2
 vim.o.writebackup = false
 vim.o.undofile = false
 vim.wo.number = true
+vim.o.signcolumn = "yes"
 vim.wo.relativenumber = true
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 vim.api.nvim_command([[
