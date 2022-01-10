@@ -5,6 +5,7 @@
 -- -------------------------------------------------------------------------------------------
 vim.o.showtabline = 2
 vim.o.sidescroll = 3
+vim.o.autoread = true
 vim.o.colorcolumn = "100"
 vim.o.expandtab = true
 vim.o.softtabstop = 2
@@ -18,6 +19,10 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 vim.api.nvim_command([[
   autocmd WinEnter,FocusGained * :setlocal number relativenumber
   autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
+]])
+
+vim.api.nvim_command([[
+  autocmd CursorHold * :checktime
 ]])
 
 if vim.fn.has("termguicolors") == 1 then
