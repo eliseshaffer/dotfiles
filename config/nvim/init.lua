@@ -16,13 +16,14 @@ vim.o.undofile = false
 vim.wo.number = true
 vim.o.signcolumn = "yes"
 vim.wo.relativenumber = true
+vim.o.updatetime = 1000
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 vim.api.nvim_command([[
   autocmd WinEnter,FocusGained * :setlocal number relativenumber
   autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
 ]])
 
-vim.api.nvim_command([[
+vim.cmd([[
   autocmd CursorHold * :checktime
 ]])
 
