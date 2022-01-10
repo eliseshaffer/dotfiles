@@ -48,6 +48,12 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$($HOMEBREW_DIR/bin/brew shellenv)"
 
-ssh-add --apple-use-keychain
+if [[ $(uname -m) = "x86_64" ]]; then
+  export HOMEBREW_DIR="/usr/local"
+  ssh-add -K
+else
+  export HOMEBREW_DIR="/opt/homebrew"
+  ssh-add --apple-use-keychain
+fi
 
 [[ -f ~/.overrides ]] && source ~/.overrides
