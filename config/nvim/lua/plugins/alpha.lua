@@ -19,6 +19,10 @@ end
 local custom_header = {
     type = "text",
     val = {
+      [[ ]],
+      [[ ]],
+      [[ ]],
+      [[ ]],
       [[     ,dPYb,              ,dPYb, ,dPYb,                           ,dPYb,]],
       [[     IP'`Yb              IP'`Yb IP'`Yb                           IP'`Yb]],
       [[     I8  8I              I8  8I I8  8I                           I8  8I  gg]],
