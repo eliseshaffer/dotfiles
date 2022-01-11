@@ -120,3 +120,7 @@ key('n', '<C-k>', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { norem
 -- key('n', '<C-]>', ':lua vim.lsp.diagnostic.goto_next()<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
 
+-- Markdown Preview (Glow)
+-- -------------------------------------------------------------------------------------------
+key('n', '<leader>md', ':Glow<CR>', { noremap = true, silent = true})
+-- -------------------------------------------------------------------------------------------
