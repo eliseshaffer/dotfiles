@@ -54,6 +54,7 @@ cask 'sqlpro-studio'
 cask 'paw'
 cask 'dash'
 cask '1password'
+cask 'typora'
 
 # Drivers
 cask 'logitech-options'
