@@ -91,6 +91,7 @@ key('n', '<leader>s', ":lua require('telescope.builtin').grep_string()<CR>", { n
 key('n', '<leader>ts', ":TestSuite<CR>", { noremap = false })
 key('n', '<leader>tf', ":TestFile<CR>", { noremap = false })
 key('n', '<leader>tn', ":TestNearest<CR>", { noremap = false })
+key('n', '<leader>tl', ":TestLast<CR>", { noremap = false })
 -- -------------------------------------------------------------------------------------------
 
 -- Line Movement (move.nvim)
