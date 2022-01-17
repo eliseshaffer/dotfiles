@@ -62,6 +62,7 @@ require('packer').startup(function(use)
   use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}  }
   use { 'terrortylor/nvim-comment'  }
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
+  use { 'mattn/emmet-vim' }
 
   -- Start Screen
   use { 'goolord/alpha-nvim'  }
