@@ -52,7 +52,7 @@ nvim_lsp.eslint.setup{
         vim.cmd('autocmd BufWritePre <buffer> EslintFixAll')
     end
 }
-nvim_lsp.sorbet.setup{
-  capabilities = capabilities
-}
+-- nvim_lsp.sorbet.setup{
+  -- capabilities = capabilities
+-- }
 
