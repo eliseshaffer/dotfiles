@@ -15,12 +15,12 @@ local components = {
 }
 
 local colors = {
-  bg = '#282828',
-  black = '#282828',
+  bg = '#2a2f36',
+  black = '#272c33',
   yellow = '#d8a657',
   cyan = '#89b482',
   oceanblue = '#45707a',
-  green = '#a9b665',
+  green = '#98c379',
   orange = '#e78a4e',
   violet = '#d3869b',
   magenta = '#c14a4a',
