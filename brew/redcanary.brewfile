@@ -63,7 +63,8 @@ brew "kubernetes-cli"
 brew "aws-iam-authenticator"
 brew "terraform"
 brew "tfenv"
-brew "figma" #design
+brew "figma" # design
+brew "mural" # design
 
 # terraform stuff
 brew "pre-commit"
