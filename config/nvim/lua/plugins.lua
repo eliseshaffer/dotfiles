@@ -66,8 +66,9 @@ require('packer').startup(function(use)
 
   -- Start Screen
   use { 'goolord/alpha-nvim'  }
-  use { 'rmagatti/auto-session' }
-  use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
+  -- use { 'rmagatti/auto-session' }
+  -- use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
+  use { 'blaineventurine/sessionable' }
 
   if packer_bootstrap then
     require('packer').sync()
@@ -88,18 +89,8 @@ require('plugins.autosave')
 require("plugins.gitsigns")
 require("plugins.nvim-comment")
 require('plugins.alpha')
-
-require('auto-session').setup {
-  log_level = 'info',
-  -- auto_session_enabled = false,
-  auto_session_suppress_dirs = {'~/', '~/Projects'},
-  auto_restore_enabled = false,
-}
-
-require('session-lens').setup({
-  path_display = {'shorten'},
-  previewer = false,
-  prompt_position = "bottom",
-  layout_strategy = "bottom_pane"
+require("sessionable").setup({
+  session_dir = "~/.local/share/nvim/session/",
+  log_level = "debug"
 })
 
