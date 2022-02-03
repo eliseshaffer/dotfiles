@@ -14,6 +14,7 @@ vim.o.shiftwidth = 2
 vim.o.writebackup = false
 vim.o.undofile = false
 vim.wo.number = true
+vim.wo.wrap = false
 vim.o.signcolumn = "yes"
 vim.wo.relativenumber = true
 vim.o.updatetime = 1000
