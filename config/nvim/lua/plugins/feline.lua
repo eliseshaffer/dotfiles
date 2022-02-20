@@ -24,8 +24,24 @@ local colors = {
   orange = '#e78a4e',
   violet = '#d3869b',
   magenta = '#c14a4a',
-  white = '#a89984',
-  fg = '#a89984',
+  white = '#dedede',
+  fg = '#dedede',
+  skyblue = '#7daea3',
+  red = '#ea6962',
+}
+
+local light_colors = {
+  fg = '#2a2f36',
+  black = '#272c33',
+  yellow = '#d8a657',
+  cyan = '#89b482',
+  oceanblue = '#45707a',
+  green = '#98c379',
+  orange = '#e78a4e',
+  violet = '#d3869b',
+  magenta = '#c14a4a',
+  white = '#dedede',
+  bg = '#dedede',
   skyblue = '#7daea3',
   red = '#ea6962',
 }
@@ -99,13 +115,13 @@ force_inactive.buftypes = {
 -- vi-mode
 components.active[1][1] = {
   provider = function()
-	  return vi_mode_utils.get_vim_mode()
+	  return " " .. vi_mode_utils.get_vim_mode() .. " "
   end,
   hl = function()
     local val = {}
 
     val.bg = vi_mode_utils.get_mode_color()
-    val.fg = 'black'
+    val.fg = 'bg'
     val.style = 'NONE'
 
     return val
@@ -133,31 +149,19 @@ components.active[1][3] = {
     return vim.fn.expand("%:F")
   end,
   hl = {
-    fg = 'white',
+    fg = 'fg',
     bg = 'bg',
     style = 'NONE'
   },
   right_sep = {
     str = ' > ',
     hl = {
-      fg = 'white',
+      fg = 'fg',
       bg = 'bg',
       style = 'NONE'
     },
   }
 }
--- nvimGps
--- components.active[1][4] = {
-  --provider = function() return gps.get_location() end,
-  --enabled = function() return gps.is_available() end,
-  -- hl = {
-    -- fg = 'white',
-    -- bg = 'bg',
-    -- style = 'NONE'
-  -- }
--- }
-
--- MID
 
 -- gitBranch
 components.active[2][1] = {
@@ -273,7 +277,7 @@ components.active[3][2] = {
     if icon ~= nil then
       val.fg = vim.fn.synIDattr(vim.fn.hlID(name), 'fg')
     else
-      val.fg = 'white'
+      val.fg = 'fg'
     end
     val.bg = 'bg'
     val.style = 'NONE'
@@ -292,7 +296,7 @@ components.active[3][3] = {
     if icon ~= nil then
       val.fg = vim.fn.synIDattr(vim.fn.hlID(name), 'fg')
     else
-      val.fg = 'white'
+      val.fg = 'fg'
     end
     val.bg = 'bg'
     val.style = 'NONE'
@@ -315,7 +319,7 @@ components.active[3][4] = {
 components.active[3][5] = {
   provider = function() return '' .. vim.bo.fileformat:upper() .. '' end,
   hl = {
-    fg = 'white',
+    fg = 'fg',
     bg = 'bg',
     style = 'NONE'
   },
@@ -325,7 +329,7 @@ components.active[3][5] = {
 components.active[3][6] = {
   provider = 'file_encoding',
   hl = {
-    fg = 'white',
+    fg = 'fg',
     bg = 'bg',
     style = 'NONE'
   },
@@ -348,7 +352,7 @@ components.active[3][7] = {}
 components.active[3][8] = {
   provider = 'position',
   hl = {
-    fg = 'white',
+    fg = 'fg',
     bg = 'bg',
     style = 'NONE'
   },
@@ -358,7 +362,7 @@ components.active[3][8] = {
 components.active[3][9] = {
   provider = 'line_percentage',
   hl = {
-    fg = 'white',
+    fg = 'fg',
     bg = 'bg',
     style = 'NONE'
   },
