@@ -28,7 +28,7 @@ require('packer').startup(function(use)
 
   -- LSP
   use { 'neovim/nvim-lspconfig' }
-  use { 'onsails/lspkind-nvim'  }
+  -- use { 'onsails/uspkind-nvim'  }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
   use { 'alexaandru/nvim-lspupdate' }
 
@@ -82,7 +82,7 @@ end)
 -- -------------------------------------------------------------------------------------------
 require('plugins.nvimtree')
 require('plugins.telescope')
-require('plugins.lspkind')
+--require('plugins.lspkind')
 require('plugins.feline')
 require('plugins.vim-test')
 require('plugins.autosave')
