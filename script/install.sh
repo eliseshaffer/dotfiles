@@ -43,6 +43,11 @@ configure_control_esc () {
   popd
 }
 
+configure_mac_defaults () {
+  # Stop Text Replacement
+  defaults write -g WebAutomaticTextReplacementEnabled -bool false
+}
+
 install_ruby () {
   ruby-install $(cat ~/.ruby-version)
 }
@@ -55,4 +60,5 @@ install_oh_my_zsh
 install_dotfiles
 install_ruby
 configure_control_esc
+configure_mac_defaults
 
