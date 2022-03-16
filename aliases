@@ -57,7 +57,7 @@ alias ber='bundle exec rspec'
 
 # Rails
 alias r='rails'
-alias rta='bin/rails test && bin/rails test:system'
+alias rta='bin/rails test:all'
 alias migrate='bundle exec rake db:migrate && bundle exec rake test:prepare'
 alias rtap='rta && git push'
 alias rspec='rspec -c'
