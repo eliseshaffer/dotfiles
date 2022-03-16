@@ -83,6 +83,7 @@ key('n', '<leader>kt', ":lua color_switch()<CR>", { noremap = true})
 -- -------------------------------------------------------------------------------------------
 key('n', '<leader>ft', ":NvimTreeToggle<CR>", { noremap = false })
 key('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<CR>", { noremap = false })
+key('n', '<leader>fa', ":Telescope find_files find_command=rg,--hidden,--files<CR>", { noremap = false })
 key('n', '<leader>fg', ":lua require('telescope.builtin').git_files()<CR>", { noremap = false })
 key('n', '<leader>fs', ":SearchSession<CR>", { noremap = false })
 key('n', '<leader>s', ":lua require('telescope.builtin').live_grep()<CR>", { noremap = false })

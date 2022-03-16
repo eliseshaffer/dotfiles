@@ -3,7 +3,7 @@ require('telescope').setup{
       file_ignore_patterns = {
           "node_modules",
           ".yarn",
-          ".git"
+          ".git/",
       },
     prompt_prefix = "λ -> ",
     selection_caret = "|> ",
