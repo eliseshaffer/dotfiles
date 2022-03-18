@@ -50,11 +50,11 @@ eval "$($HOMEBREW_DIR/bin/brew shellenv)"
 
 if [[ $(uname -m) = "x86_64" ]]; then
   export HOMEBREW_DIR="/usr/local"
-  ssh-add -K
 else
   export HOMEBREW_DIR="/opt/homebrew"
-  ssh-add --apple-use-keychain
 fi
+
+ssh-add --apple-use-keychain
 
 [[ -f ~/.overrides ]] && source ~/.overrides
 [[ -f ~/.zshrc.private ]] && source ~/.zshrc.private
