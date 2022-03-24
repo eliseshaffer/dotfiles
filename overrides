@@ -1,5 +1,8 @@
 alias railsc-live="kubectl exec -it $""(kubectl get pods -n portal-live -l app=portal-sidekiq | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-live -- bundle exec rails c"
 alias railsc-staging="kubectl exec -it $""(kubectl get pods -n portal-staging -l app=portal-web | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-staging -c app -- bundle exec rails c"
 alias railsc-swrite="kubectl exec -it $""(kubectl get pods -n portal-staging -l app=portal-web | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-staging -c app -- bundle exec rails c"
-
+alias kc='kubectl  config get-contexts'
+alias kc-ingest='kubectl config use-context ingest-prod-ohio'
+alias kc-proc='kubectl   config use-context processing-prod-ohio'
+alias kc-purple='kubectl config use-context purple'
 [[ -f ~/.zshrc.private ]] && source ~/.zshrc.private

@@ -43,6 +43,7 @@ require('packer').startup(function(use)
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'p00f/nvim-ts-rainbow' }
+  use { 'sheerun/vim-polyglot' }
 
   -- UI
   -- use { 'romgrk/barbar.nvim' require('plugins.barbar') }
