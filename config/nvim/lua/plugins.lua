@@ -64,6 +64,7 @@ require('packer').startup(function(use)
   use { 'terrortylor/nvim-comment'  }
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
   use { 'mattn/emmet-vim' }
+  use { 'knsh14/vim-github-link' }
 
   -- Start Screen
   use { 'goolord/alpha-nvim'  }
