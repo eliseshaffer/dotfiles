@@ -78,10 +78,9 @@ function draft() {
 function git_clone_and_cd() {
   directory=$( echo "${1}" | awk -F '/' '{print $NF}' )
   directory=${directory%.*}
-  echo "${directory}"
-  git clone "${1}" && cd "$directory"
+  git clone "${1}"
+  echo "switching to ${directory}"&& cd "$directory"
 }
-alias gcl=git_clone_and_cd
 
 function code_dirs() {
   find "$HOME/code" -type d -maxdepth 2 -mindepth 1 | grep -vE '.*dotfiles.*' | grep -vE '^\\.'

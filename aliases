@@ -47,6 +47,7 @@ alias gdo='git branch | grep -v "\*" | xargs -n 1 git branch -D'
 alias grpo='git remote prune origin'
 alias gp='git pull --rebase'
 alias gacm='git add . && git commit -m'
+alias gcl='git_clone_and_cd'
 
 # Bundler
 alias be='bundle exec'
