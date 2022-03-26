@@ -61,7 +61,7 @@ require('packer').startup(function(use)
   use { "Pocco81/AutoSave.nvim"  }
   use { 'fedepujol/move.nvim' }
   use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}  }
-  use { 'terrortylor/nvim-comment'  }
+  use { 'preservim/nerdcommenter'  }
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
@@ -89,7 +89,6 @@ require('plugins.feline')
 require('plugins.vim-test')
 require('plugins.autosave')
 require("plugins.gitsigns")
-require("plugins.nvim-comment")
 require('plugins.alpha')
 require("sessionable").setup({
   session_dir = "~/.local/share/nvim/session/",
