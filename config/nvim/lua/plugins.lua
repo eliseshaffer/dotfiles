@@ -34,7 +34,8 @@ require('packer').startup(function(use)
 
   -- Autocomplete / Snippets
   use { 'hrsh7th/nvim-cmp' }
-  use { 'hrsh7th/vim-vsnip' }
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'rafamadriz/friendly-snippets' }
   use { 'windwp/nvim-autopairs' }
@@ -90,6 +91,7 @@ require('plugins.vim-test')
 require('plugins.autosave')
 require("plugins.gitsigns")
 require('plugins.alpha')
+require("plugins.nvim-cmp")
 require("sessionable").setup({
   session_dir = "~/.local/share/nvim/session/",
   log_level = "debug"
