@@ -6,8 +6,9 @@ esac
 
 function mkdir_and_cd()
 {
-  command mkdir $1 && cd $1
+  command mkdir $@ && cd ${@[$#]}
 }
+
 alias mkdir='mkdir_and_cd'
 
 alias d="cd $DOTFILES"
