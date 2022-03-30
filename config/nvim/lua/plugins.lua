@@ -97,3 +97,4 @@ require("sessionable").setup({
   log_level = "debug"
 })
 
+require'luasnip'.filetype_extend("ruby", {"rails"})
