@@ -26,6 +26,7 @@ vim.api.nvim_command([[
 
 vim.cmd([[
   autocmd CursorHold * :checktime
+  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 ]])
 
 if vim.fn.has("termguicolors") == 1 then
