@@ -9,3 +9,4 @@ vim/session/*
 .vim-session
 config/nvim/plugin/
 config/iterm*
+config/configstore*
