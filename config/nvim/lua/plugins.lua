@@ -66,6 +66,7 @@ require('packer').startup(function(use)
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
+  use {"akinsho/toggleterm.nvim"} -- Opens a terminal
 
   -- Start Screen
   use { 'goolord/alpha-nvim'  }
@@ -92,6 +93,7 @@ require('plugins.autosave')
 require("plugins.gitsigns")
 require('plugins.alpha')
 require("plugins.nvim-cmp")
+require("plugins.toggleterm")
 require("sessionable").setup({
   session_dir = "~/.local/share/nvim/session/",
   log_level = "debug"

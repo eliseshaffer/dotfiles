@@ -136,3 +136,9 @@ key('n', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true})
 key('v', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
 
+-- Terminal
+-- -------------------------------------------------------------------------------------------
+-- key('n', '<C-}>', ':ToggleTerm size=20 dir=~/Desktop direction=horizontal<CR>', { noremap = false, silent = true})
+-- key('n', '<C-\>', ':ToggleTerm size=80 dir=~/Desktop direction=float<CR>', { noremap = false, silent = true})
+-- -------------------------------------------------------------------------------------------
+
