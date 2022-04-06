@@ -52,6 +52,10 @@ require'nvim-tree'.setup {
     -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
     ignore_list = {}
   },
+  filters = {
+    dotfiles = false,
+    custom = { '.circleci', '.git', '.github', '.vscode', '.docker' }
+  },
   -- configuration options for the system open command (`s` in the tree by default)
   system_open = {
     -- the command to run this, leaving nil should work in most cases
