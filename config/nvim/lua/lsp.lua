@@ -49,7 +49,7 @@ nvim_lsp.eslint.setup{
     on_attach = function(client, buffer)
         -- nvim_lsp.services.commmon_on_attach(client, bufnr)
         client.resolved_capabilities.document_formatting = true
-        vim.cmd('autocmd BufWritePre <buffer> EslintFixAll')
+        --vim.cmd('autocmd BufWritePre <buffer> EslintFixAll')
     end
 }
 -- nvim_lsp.sorbet.setup{
