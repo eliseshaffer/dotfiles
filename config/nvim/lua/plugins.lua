@@ -95,7 +95,7 @@ require('plugins.alpha')
 require("plugins.nvim-cmp")
 require("plugins.toggleterm")
 require("sessionable").setup({
-  session_dir = "~/.local/share/nvim/session/",
+  session_dir = "$HOME/.local/share/nvim/session/",
   log_level = "debug"
 })
 
