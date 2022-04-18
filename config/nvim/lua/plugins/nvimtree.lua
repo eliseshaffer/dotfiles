@@ -1,4 +1,3 @@
-vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_auto_ignore_ft = 'startify'
 vim.g.nvim_tree_icons = {
   default = '',
@@ -63,7 +62,11 @@ require'nvim-tree'.setup {
     -- the command arguments as a list
     args = {}
   },
-
+  renderer = {
+    indent_markers = {
+      enable = true
+    },
+  },
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
     width = 30,
