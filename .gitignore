@@ -7,6 +7,6 @@ vim/bundle/
 vim/plugged/
 vim/session/*
 .vim-session
+config/*
+!config/nvim
 config/nvim/plugin/
-config/iterm*
-config/configstore*
