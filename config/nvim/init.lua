@@ -4,6 +4,7 @@
 --
 -- -------------------------------------------------------------------------------------------
 vim.o.showtabline = 2
+vim.o.laststatus = 3
 vim.o.sidescroll = 3
 vim.o.autoread = true
 vim.o.colorcolumn = "100"
