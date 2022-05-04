@@ -416,14 +416,17 @@ components.inactive[1][1] = {
     ' '
   }
 }
+local currentColor = vim.go.background
+
+require('feline').add_theme('dark', dark)
+require('feline').add_theme('light', light)
 
 require('feline').setup({
-  theme = dark,
+  theme = vim.go.background,
   default_bg = bg,
   default_fg = fg,
   vi_mode_colors = vi_mode_colors,
   components = components,
   force_inactive = force_inactive,
 })
-require('feline').add_theme('dark', dark)
-require('feline').add_theme('light', light)
+
