@@ -14,36 +14,36 @@ local components = {
   inactive = {{}, {}, {}},
 }
 
-local colors = {
-  bg = '#2a2f36',
+local dark = {
+  bg = '#272c33',
   black = '#272c33',
-  yellow = '#d8a657',
-  cyan = '#89b482',
+  yellow = '#e5c07b',
+  cyan = '#56b6c2',
   oceanblue = '#45707a',
   green = '#98c379',
-  orange = '#e78a4e',
-  violet = '#d3869b',
+  orange = '#e5c07b',
+  violet = '#c678dd',
   magenta = '#c14a4a',
   white = '#dedede',
-  fg = '#dedede',
-  skyblue = '#7daea3',
+  fg = '#abb2bf',
+  skyblue = '#61afef',
   red = '#ea6962',
 }
 
-local light_colors = {
-  fg = '#2a2f36',
+local light = {
+  fg = '#494b53',
   black = '#272c33',
-  yellow = '#d8a657',
-  cyan = '#89b482',
-  oceanblue = '#45707a',
-  green = '#98c379',
-  orange = '#e78a4e',
-  violet = '#d3869b',
+  yellow = '#d19a66',
+  cyan = '#0184bc',
+  oceanblue = '#4078f2',
+  green = '#50a14f',
+  orange = '#986801',
+  violet = '#a626a4',
   magenta = '#c14a4a',
-  white = '#dedede',
-  bg = '#dedede',
+  white = '#fafafa',
+  bg = '#fafafa',
   skyblue = '#7daea3',
-  red = '#ea6962',
+  red = '#ca1243',
 }
 
 local vi_mode_colors = {
@@ -115,7 +115,8 @@ force_inactive.buftypes = {
 -- vi-mode
 components.active[1][1] = {
   provider = function()
-	  return " " .. vi_mode_utils.get_vim_mode() .. " "
+		--return " " .. string.sub(vi_mode_utils.get_vim_mode(), 1, 1) .. " "
+	  return "  " -- .. string.sub(vi_mode_utils.get_vim_mode(), 1, 1) .. " "
   end,
   hl = function()
     local val = {}
@@ -126,25 +127,24 @@ components.active[1][1] = {
 
     return val
   end,
-  left_sep = ' ',
   right_sep = ' '
 }
 -- vi-symbol
-components.active[1][2] = {
-  provider = function()
-    return vi_mode_text[vi_mode_utils.get_vim_mode()]
-  end,
-  hl = function()
-    local val = {}
-    val.fg = vi_mode_utils.get_mode_color()
-    val.bg = 'bg'
-    val.style = 'NONE'
-    return val
-  end,
-  right_sep = ' '
-}
+--components.active[1][2] = {
+  --provider = function()
+    --return vi_mode_text[vi_mode_utils.get_vim_mode()]
+  --end,
+  --hl = function()
+    --local val = {}
+    --val.fg = vi_mode_utils.get_mode_color()
+    --val.bg = 'bg'
+    --val.style = 'NONE'
+    --return val
+  --end,
+  --right_sep = ' '
+--}
 -- filename
-components.active[1][3] = {
+components.active[1][7] = {
   provider = function()
     return vim.fn.expand("%:F")
   end,
@@ -152,52 +152,63 @@ components.active[1][3] = {
     fg = 'fg',
     bg = 'bg',
     style = 'NONE'
-  },
-  right_sep = {
-    str = ' > ',
-    hl = {
-      fg = 'fg',
-      bg = 'bg',
-      style = 'NONE'
-    },
   }
+  --right_sep = {
+    --str = ' > ',
+    --hl = {
+      --fg = 'fg',
+      --bg = 'bg',
+      --style = 'NONE'
+    --},
+  --}
 }
 
 -- gitBranch
-components.active[2][1] = {
+components.active[1][2] = {
   provider = 'git_branch',
   hl = {
-    fg = 'yellow',
+    fg = 'violet',
     bg = 'bg',
     style = 'NONE'
-  }
+  },
 }
 -- diffAdd
-components.active[2][2] = {
+components.active[1][3] = {
   provider = 'git_diff_added',
   hl = {
     fg = 'green',
     bg = 'bg',
     style = 'NONE'
-  }
+  },
 }
 -- diffModfified
-components.active[2][3] = {
+components.active[1][4] = {
   provider = 'git_diff_changed',
   hl = {
     fg = 'orange',
     bg = 'bg',
     style = 'NONE'
-  }
+  },
 }
 -- diffRemove
-components.active[2][4] = {
+components.active[1][5] = {
   provider = 'git_diff_removed',
   hl = {
     fg = 'red',
     bg = 'bg',
     style = 'NONE'
   },
+}
+
+components.active[1][6] = {
+  provider = function()
+    return "_"
+  end,
+  hl = {
+    fg = 'bg',
+    bg = 'bg',
+    style = 'NONE'
+  }
 }
 -- diagnosticErrors
 components.active[2][5] = {
@@ -316,7 +327,7 @@ components.active[3][4] = {
   right_sep = ' '
 }
 -- fileFormat
-components.active[3][5] = {
+components.inactive[3][5] = {
   provider = function() return '' .. vim.bo.fileformat:upper() .. '' end,
   hl = {
     fg = 'fg',
@@ -326,10 +337,10 @@ components.active[3][5] = {
   right_sep = ' '
 }
 -- fileEncode
-components.active[3][6] = {
+components.active[3][5] = {
   provider = 'file_encoding',
   hl = {
-    fg = 'fg',
+    fg = 'green',
     bg = 'bg',
     style = 'NONE'
   },
@@ -347,9 +358,9 @@ components.active[3][6] = {
 --   },
 --   right_sep = ' '
 -- }
-components.active[3][7] = {}
+components.active[3][6] = {}
 -- lineInfo
-components.active[3][8] = {
+components.inactive[3][7] = {
   provider = 'position',
   hl = {
     fg = 'fg',
@@ -359,7 +370,7 @@ components.active[3][8] = {
   right_sep = ' '
 }
 -- linePercent
-components.active[3][9] = {
+components.active[3][7] = {
   provider = 'line_percentage',
   hl = {
     fg = 'fg',
@@ -369,7 +380,7 @@ components.active[3][9] = {
   right_sep = ' '
 }
 -- scrollBar
-components.active[3][10] = {
+components.active[3][8] = {
   provider = 'scroll_bar',
   hl = {
     fg = 'yellow',
@@ -407,11 +418,12 @@ components.inactive[1][1] = {
 }
 
 require('feline').setup({
-  theme = colors,
+  theme = dark,
   default_bg = bg,
   default_fg = fg,
   vi_mode_colors = vi_mode_colors,
   components = components,
   force_inactive = force_inactive,
 })
-
+require('feline').add_theme('dark', dark)
+require('feline').add_theme('light', light)

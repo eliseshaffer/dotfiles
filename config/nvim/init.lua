@@ -55,11 +55,13 @@ vim.api.nvim_command 'colorscheme one'
 -- -------------------------------------------------------------------------------------------
 function color_switch()
   local currentColor = vim.go.background
-		if currentColor == 'dark' then
-			vim.go.background = 'light'
-  	else
-			vim.go.background = 'dark'
-		end
+  if currentColor == 'dark' then
+    vim.go.background = 'light'
+    require('feline').use_theme('light')
+  else
+    vim.go.background = 'dark'
+    require('feline').use_theme('dark')
+  end
 end
 
 -- -------------------------------------------------------------------------------------------
