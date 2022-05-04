@@ -99,4 +99,5 @@ require("sessionable").setup({
   log_level = "debug"
 })
 
+vim.g.NERDSpaceDelims = 1
 require'luasnip'.filetype_extend("ruby", {"rails"})
