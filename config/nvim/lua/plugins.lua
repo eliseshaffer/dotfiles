@@ -94,6 +94,7 @@ require("plugins.gitsigns")
 require('plugins.alpha')
 require("plugins.nvim-cmp")
 require("plugins.toggleterm")
+require("plugins.treesitter")
 require("sessionable").setup({
   session_dir = "$HOME/.local/share/nvim/session/",
   log_level = "debug"
