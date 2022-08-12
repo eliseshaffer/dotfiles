@@ -124,7 +124,7 @@ key('n', '<leader>gD', ':lua vim.lsp.buf.declaration()<CR>', { noremap = true, s
 key('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true})
 key('n', '<leader>gi', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true})
 key('n', '<leader>F', ':lua vim.lsp.buf.formatting()<CR>', { noremap = true, silent = true})
-key('n', '<C-k>', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap = true, silent = true})
+key('n', '<C-k>', ':lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true})
 -- key('n', '<C-[>', ':lua vim.lsp.diagnostic.goto_prev()<CR>', { noremap = true, silent = true})
 -- key('n', '<C-]>', ':lua vim.lsp.diagnostic.goto_next()<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
