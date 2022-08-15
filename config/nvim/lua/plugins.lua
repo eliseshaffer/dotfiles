@@ -69,7 +69,6 @@ require('packer').startup(function(use)
   use { "akinsho/toggleterm.nvim", commit = "9f969e7f72d19966756318d61f2562f67dbb1f9c" } -- Opens a terminal
   -- use { 'ptzz/lf.vim', commit = "eab8f04b2" }
   -- use { 'voldikss/vim-floaterm', commit = "e3f2d94" }
-  use { "nvim-telescope/telescope-file-browser.nvim", commit = "4272c5" }
 
   -- Start Screen
   use { 'goolord/alpha-nvim', commit = "4781fcfea5ddc1a92d41b32dc325132ed6fce7a8"  }
