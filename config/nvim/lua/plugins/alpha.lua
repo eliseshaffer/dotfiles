@@ -43,7 +43,7 @@ dashboard.section.buttons.val = {
   button("e", "  New file", ":ene <BAR> startinsert <CR>"),
   button("s", "  Session", ":SearchSession<CR>"),
   button("f", "  Find file", ":lua require('telescope.builtin').find_files()<CR>"),
-  button("t", "פּ  File Tree", ":Telescope file_browser initial_mode=normal<CR>"),
+  button("t", "פּ  File Tree", ":NvimTreeToggle<CR>"),
   button("p", "  Plugins", ":e ~/.config/nvim/lua/plugins.lua<CR>"),
   button("u", "  Sync plugins", ":PackerSync<CR>"),
   button("q", "  Quit", "<Cmd>qa<CR>"),
