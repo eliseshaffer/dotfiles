@@ -1,4 +1,5 @@
 alias railsc-live="kubectl exec -it $""(kubectl get pods -n portal-live -l app=portal-sidekiq | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-live -- bundle exec rails c"
+alias railsc-write="kubectl exec -it $""(kubectl get pods -n portal-live -l app=portal-sidekiq | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-live -- script/write_console"
 alias railsc-staging="kubectl exec -it $""(kubectl get pods -n portal-staging -l app=portal-web | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-staging -c app -- bundle exec rails c"
 alias railsc-swrite="kubectl exec -it $""(kubectl get pods -n portal-staging -l app=portal-web | grep Running | head -n 1 | cut -d ' ' -f 1) -n portal-staging -c app -- bundle exec rails c"
 alias kc='kubectl  config get-contexts'
