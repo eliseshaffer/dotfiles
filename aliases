@@ -101,4 +101,4 @@ alias dark="switchtheme dark"
 alias kt="toggle_profile"
 
 alias k="kubectl"
-
+alias fix_chromedriver="xattr -d com.apple.quarantine $(which chromedriver)"
