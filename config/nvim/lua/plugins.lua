@@ -66,7 +66,7 @@ require('packer').startup(function(use)
   use { 'npxbr/glow.nvim', commit = "0c76518e440f2ea4dbadd87beec8eea4ce030f17" } -- Markdown Previewer
   use { 'mattn/emmet-vim', commit = "def5d57a1ae5afb1b96ebe83c4652d1c03640f4d" }
   use { 'knsh14/vim-github-link', commit = "b910c9c2593dbebb38e0ca430025a4b70e01e14b" }
-  use { "akinsho/toggleterm.nvim", commit = "9f969e7f72d19966756318d61f2562f67dbb1f9c" } -- Opens a terminal
+  -- use { "akinsho/toggleterm.nvim", commit = "9f969e7f72d19966756318d61f2562f67dbb1f9c" } -- Opens a terminal
   -- use { 'ptzz/lf.vim', commit = "eab8f04b2" }
   -- use { 'voldikss/vim-floaterm', commit = "e3f2d94" }
 
