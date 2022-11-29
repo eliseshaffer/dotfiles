@@ -10,6 +10,7 @@ function mkdir_and_cd()
 }
 
 alias mkdir='mkdir_and_cd'
+alias cd='cd_and_load_node'
 
 alias d="cd $DOTFILES"
 alias dotfiles="app dotfiles"

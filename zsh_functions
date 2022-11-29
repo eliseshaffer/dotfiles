@@ -24,6 +24,13 @@ pick_brewfile() {
   done
 }
 
+cd_and_load_node() {
+  cd $@
+  if [[ -f ".nvmrc" ]]; then 
+    nvm use
+  fi
+}
+
 create_brewfile() {
   echo "TODO: This feature isn't ready yet."
   echo "Please create the file in $DOTFILES/brew/ and run again."
@@ -43,7 +50,7 @@ function app() {
         echo "App doesn't exist"
     else
         echo "Switching to app directory: ${APP_DIRECTORY}"
-        cd "${APP_DIRECTORY}"
+        cd_and_load_node "${APP_DIRECTORY}"
     fi
 }
 
