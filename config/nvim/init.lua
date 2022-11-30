@@ -23,8 +23,17 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 vim.api.nvim_command([[
   autocmd WinEnter,FocusGained * :setlocal number relativenumber
   autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
-  autocmd BufNewFile,BufRead *.turbo_stream.erb :setlocal ft=eruby.html
 ]])
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = "*.turbo_stream.erb",
+    command = "setlocal ft=eruby.html"
+})
+
+vim.api.nvim_create_autocmd({ "BufRead","BufNewFile" }, {
+    pattern = "*.md",
+    command = "setlocal textwidth=80"
+})
 
 vim.cmd([[
   autocmd CursorHold * :checktime
