@@ -31,8 +31,8 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 vim.api.nvim_create_autocmd({ "BufRead","BufNewFile" }, {
-    pattern = "*.md",
-    command = "setlocal textwidth=80"
+    pattern = {"*.md", "*COMMIT_EDITMSG"},
+    command = "call pencil#init({'wrap': 'hard', 'autoformat': 1})"
 })
 
 vim.cmd([[

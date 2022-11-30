@@ -41,10 +41,11 @@ require('packer').startup(function(use)
   use { 'windwp/nvim-autopairs', commit = "aea913109d30c87df329ec9b8fea9aed6ef9f52a" }
   require('nvim-autopairs').setup()
 
-  -- Treesitter
+  -- Treesitter / Formatting
   use { 'nvim-treesitter/nvim-treesitter', commit = "755bfaf2873feb5eea983f8a3a6cae81cf4598c9", run = ':TSUpdate' }
   use { 'p00f/nvim-ts-rainbow', commit = "5fa662e85f736f7ffce0e75b9d98a99f9aca0e4f" }
   use { 'sheerun/vim-polyglot', commit = "38282d58387cff48ac203f6912c05e4c8686141b" }
+  use { 'preservim/vim-pencil' }
 
   -- UI
   -- use { 'romgrk/barbar.nvim' require('plugins.barbar') }
