@@ -49,7 +49,7 @@ require('packer').startup(function(use)
 
   -- UI
   -- use { 'romgrk/barbar.nvim' require('plugins.barbar') }
-  use { 'feline-nvim/feline.nvim'  }
+  use { 'feline-nvim/feline.nvim', tag = 'v0.4.0' }
 
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
@@ -60,8 +60,8 @@ require('packer').startup(function(use)
 
   -- Tools
   use { 'vim-test/vim-test'  }
-  use { "Pocco81/AutoSave.nvim"  }
-  use { 'fedepujol/move.nvim' }
+  use { "pocco81/auto-save.nvim"  }
+  use { 'ur4ltz/move.nvim' }
   use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}  }
   use { 'preservim/nerdcommenter'  }
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
@@ -93,7 +93,7 @@ require('plugins.telescope')
 --require('plugins.lspkind')
 require('plugins.feline')
 require('plugins.vim-test')
-require('plugins.autosave')
+-- require('plugins.autosave')
 require("plugins.gitsigns")
 require('plugins.alpha')
 require("plugins.nvim-cmp")
