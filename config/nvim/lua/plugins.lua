@@ -46,6 +46,11 @@ require('packer').startup(function(use)
   use { 'p00f/nvim-ts-rainbow' }
   use { 'sheerun/vim-polyglot' }
   use { 'preservim/vim-pencil' }
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
+  require("nvim-gps").setup()
 
   -- UI
   -- use { 'romgrk/barbar.nvim' require('plugins.barbar') }
