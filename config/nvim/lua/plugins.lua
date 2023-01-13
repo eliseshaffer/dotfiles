@@ -67,6 +67,7 @@ require('packer').startup(function(use)
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
+  use { 'fgheng/winbar.nvim' }
   -- use { "akinsho/toggleterm.nvim" } -- Opens a terminal
   -- use { 'ptzz/lf.vim' }
   -- use { 'voldikss/vim-floaterm' }
@@ -98,6 +99,7 @@ require('plugins.alpha')
 require("plugins.nvim-cmp")
 require("plugins.toggleterm")
 require("plugins.treesitter")
+require("plugins.winbar")
 require("sessionable").setup({
   session_dir = "$HOME/.local/share/nvim/session/",
   log_level = "debug"
