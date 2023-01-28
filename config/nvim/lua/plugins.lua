@@ -62,6 +62,7 @@ require('packer').startup(function(use)
 
   -- Colors
   use { 'eliseshaffer/vim-one' }
+  use { 'kaicataldo/material.vim', branch = 'main' }
 
   -- Tools
   use { 'vim-test/vim-test'  }
