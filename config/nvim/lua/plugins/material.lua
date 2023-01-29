@@ -27,7 +27,7 @@ require('material').setup({
     -- "which-key",
   },
   high_visibility = {
-      lighter = true, -- Enable higher contrast text for lighter style
+      lighter = false, -- Enable higher contrast text for lighter style
       darker = false -- Enable higher contrast text for darker style
   },
   lualine_style = 'default'

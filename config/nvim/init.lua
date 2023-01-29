@@ -56,7 +56,14 @@ require('plugins')
 require('plugins.treesitter')
 require('lsp')
 
-vim.g.material_style = "palenight"
+local currentColor = vim.go.background
+
+if currentColor == 'dark' then
+    vim.g.material_style = "palenight"
+else
+    vim.g.material_style = "lighter"
+end
+
 vim.api.nvim_command 'colorscheme material'
 
 -- -------------------------------------------------------------------------------------------
