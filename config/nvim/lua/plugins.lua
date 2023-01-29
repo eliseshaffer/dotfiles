@@ -82,9 +82,11 @@ require('packer').startup(function(use)
   -- use { "akinsho/toggleterm.nvim" } -- Opens a terminal
   -- use { 'ptzz/lf.vim' }
   -- use { 'voldikss/vim-floaterm' }
-
   -- Start Screen
-  use { 'goolord/alpha-nvim'  }
+  use { 'goolord/alpha-nvim', config = function() 
+        require 'plugins.alpha'
+      end
+    }
   -- use { 'rmagatti/auto-session' }
   -- use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
   use { 'blaineventurine/sessionable' }
@@ -109,7 +111,6 @@ require('plugins.vim-test')
 -- require('plugins.autosave')
 require("plugins.gitsigns")
 require("plugins.neogit")
-require('plugins.alpha')
 require("plugins.nvim-cmp")
 require("plugins.toggleterm")
 require("plugins.treesitter")
