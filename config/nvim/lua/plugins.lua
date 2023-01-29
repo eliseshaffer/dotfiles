@@ -100,7 +100,14 @@ require('packer').startup(function(use)
   }
   -- use { 'rmagatti/auto-session' }
   -- use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
-  use { 'blaineventurine/sessionable' }
+  use { 'blaineventurine/sessionable',
+    config = function()  
+      require("sessionable").setup({
+          session_dir = "$HOME/.local/share/nvim/session/",
+          log_level = "debug"
+        })
+    end 
+  }
 
   if packer_bootstrap then
     require('packer').sync()
@@ -126,10 +133,6 @@ end)
 -- require("plugins.toggleterm")
 -- require("plugins.treesitter")
 -- require("plugins.winbar")
-require("sessionable").setup({
-    session_dir = "$HOME/.local/share/nvim/session/",
-    log_level = "debug"
-  })
 
 vim.g.NERDSpaceDelims = 1
 require'luasnip'.filetype_extend("ruby", {"rails"})
