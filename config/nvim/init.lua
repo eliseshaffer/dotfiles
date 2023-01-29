@@ -56,7 +56,8 @@ require('plugins')
 require('plugins.treesitter')
 require('lsp')
 
-vim.api.nvim_command 'colorscheme one'
+vim.g.material_style = "palenight"
+vim.api.nvim_command 'colorscheme material'
 
 -- -------------------------------------------------------------------------------------------
 --
@@ -67,9 +68,11 @@ function color_switch()
   local currentColor = vim.go.background
   if currentColor == 'dark' then
     vim.go.background = 'light'
+    require('material.functions').change_style("lighter")
     require('feline').use_theme('light')
   else
     vim.go.background = 'dark'
+    require('material.functions').change_style("palenight")
     require('feline').use_theme('dark')
   end
 end
