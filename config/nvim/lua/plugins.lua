@@ -22,9 +22,9 @@ require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
   -- File Management
-  use { 'kyazdani42/nvim-tree.lua'  }
+  use { 'kyazdani42/nvim-tree.lua', config = function() require 'plugins.nvimtree' end  }
   use { 'nvim-lua/plenary.nvim' } -- Required for telescope
-  use { 'nvim-telescope/telescope.nvim'  }
+  use { 'nvim-telescope/telescope.nvim', config = function() require 'plugins.telescope' end }
 
   -- LSP
   use { 'neovim/nvim-lspconfig' }
@@ -33,7 +33,7 @@ require('packer').startup(function(use)
   use { 'alexaandru/nvim-lspupdate' }
 
   -- Autocomplete / Snippets
-  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/nvim-cmp', config = function() require 'plugins.nvim-cmp' end }
   use { 'L3MON4D3/LuaSnip' }
   use { 'saadparwaiz1/cmp_luasnip' }
   use { 'hrsh7th/cmp-nvim-lsp' }
@@ -42,7 +42,10 @@ require('packer').startup(function(use)
   require('nvim-autopairs').setup()
 
   -- Treesitter / Formatting
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function() require 'plugins.treesitter' end
+  }
   use { 'p00f/nvim-ts-rainbow' }
   use { 'sheerun/vim-polyglot' }
   use { 'preservim/vim-pencil' }
@@ -57,7 +60,8 @@ require('packer').startup(function(use)
   -- use { 'feline-nvim/feline.nvim', tag = 'v0.4.0' }
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = function() require 'plugins.lualine' end 
   }
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
@@ -65,28 +69,35 @@ require('packer').startup(function(use)
 
   -- Colors
   use { 'eliseshaffer/vim-one' }
-  use { 'marko-cerovac/material.nvim' }
+  use { 'marko-cerovac/material.nvim', config = function() require 'plugins.material' end }
 
   -- Tools
-  use { 'vim-test/vim-test'  }
-  use { "pocco81/auto-save.nvim"  }
+  use { 'vim-test/vim-test', config = function() require 'plugins.vim-test' end }
+  use { "pocco81/auto-save.nvim" }
   use { 'ur4ltz/move.nvim' }
-  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}  }
-  use { 'TimUntersberger/neogit', requires = {'nvim-lua/plenary.nvim'}  }
+  use { 'lewis6991/gitsigns.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+    config = function() require 'plugins.gitsigns' end
+  }
+  use { 'TimUntersberger/neogit',
+    requires = {'nvim-lua/plenary.nvim'},
+    config = function() require 'plugins.neogit' end
+  }
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use { 'preservim/nerdcommenter'  }
+  use { 'preservim/nerdcommenter' }
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
-  use { 'fgheng/winbar.nvim' }
+  use { 'fgheng/winbar.nvim', config = function() require 'plugins.winbar' end }
   -- use { "akinsho/toggleterm.nvim" } -- Opens a terminal
   -- use { 'ptzz/lf.vim' }
   -- use { 'voldikss/vim-floaterm' }
   -- Start Screen
-  use { 'goolord/alpha-nvim', config = function() 
-        require 'plugins.alpha'
-      end
-    }
+  use { 'goolord/alpha-nvim', 
+    config = function() 
+      require 'plugins.alpha'
+    end
+  }
   -- use { 'rmagatti/auto-session' }
   -- use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
   use { 'blaineventurine/sessionable' }
@@ -101,24 +112,24 @@ end)
 -- Plugin Configs
 --
 -- -------------------------------------------------------------------------------------------
-require('plugins.nvimtree')
-require('plugins.telescope')
+-- require('plugins.nvimtree')
+-- require('plugins.telescope')
 --require('plugins.lspkind')
 -- require('plugins.feline')
-require('plugins.lualine')
-require('plugins.material')
-require('plugins.vim-test')
+-- require('plugins.lualine')
+-- require('plugins.material')
+-- require('plugins.vim-test')
 -- require('plugins.autosave')
-require("plugins.gitsigns")
-require("plugins.neogit")
-require("plugins.nvim-cmp")
-require("plugins.toggleterm")
-require("plugins.treesitter")
-require("plugins.winbar")
+-- require("plugins.gitsigns")
+-- require("plugins.neogit")
+-- require("plugins.nvim-cmp")
+-- require("plugins.toggleterm")
+-- require("plugins.treesitter")
+-- require("plugins.winbar")
 require("sessionable").setup({
-  session_dir = "$HOME/.local/share/nvim/session/",
-  log_level = "debug"
-})
+    session_dir = "$HOME/.local/share/nvim/session/",
+    log_level = "debug"
+  })
 
 vim.g.NERDSpaceDelims = 1
 require'luasnip'.filetype_extend("ruby", {"rails"})
