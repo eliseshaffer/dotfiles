@@ -54,8 +54,11 @@ require('packer').startup(function(use)
 
   -- UI
   -- use { 'romgrk/barbar.nvim' require('plugins.barbar') }
-  use { 'feline-nvim/feline.nvim', tag = 'v0.4.0' }
-
+  -- use { 'feline-nvim/feline.nvim', tag = 'v0.4.0' }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'ryanoasis/vim-devicons' }
@@ -97,7 +100,9 @@ end)
 require('plugins.nvimtree')
 require('plugins.telescope')
 --require('plugins.lspkind')
-require('plugins.feline')
+-- require('plugins.feline')
+require('plugins.lualine')
+require('plugins.material')
 require('plugins.vim-test')
 -- require('plugins.autosave')
 require("plugins.gitsigns")
@@ -113,3 +118,4 @@ require("sessionable").setup({
 
 vim.g.NERDSpaceDelims = 1
 require'luasnip'.filetype_extend("ruby", {"rails"})
+

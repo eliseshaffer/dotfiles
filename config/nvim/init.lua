@@ -69,11 +69,9 @@ function color_switch()
   if currentColor == 'dark' then
     vim.go.background = 'light'
     require('material.functions').change_style("lighter")
-    require('feline').use_theme('light')
   else
     vim.go.background = 'dark'
     require('material.functions').change_style("palenight")
-    require('feline').use_theme('dark')
   end
 end
 
