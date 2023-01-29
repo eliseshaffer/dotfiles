@@ -72,6 +72,7 @@ require('packer').startup(function(use)
   use { "pocco81/auto-save.nvim"  }
   use { 'ur4ltz/move.nvim' }
   use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}  }
+  use { 'TimUntersberger/neogit', requires = {'nvim-lua/plenary.nvim'}  }
   use { 'preservim/nerdcommenter'  }
   use { 'npxbr/glow.nvim' } -- Markdown Previewer
   use { 'mattn/emmet-vim' }
@@ -106,6 +107,7 @@ require('plugins.material')
 require('plugins.vim-test')
 -- require('plugins.autosave')
 require("plugins.gitsigns")
+require("plugins.neogit")
 require('plugins.alpha')
 require("plugins.nvim-cmp")
 require("plugins.toggleterm")

@@ -156,6 +156,8 @@ key('n', '<leader>md', ':Glow<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
 key('n', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true})
 key('v', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true})
+key('n', '<leader>gs', ':Neogit kind=vsplit<CR>', { noremap = true, silent = true})
+key('v', '<leader>gs', ':Neogit king=vsplit<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
 
 -- Terminal
