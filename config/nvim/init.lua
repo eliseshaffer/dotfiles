@@ -158,6 +158,10 @@ key('n', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true})
 key('v', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true})
 key('n', '<leader>gs', ':Neogit kind=vsplit<CR>', { noremap = true, silent = true})
 key('v', '<leader>gs', ':Neogit king=vsplit<CR>', { noremap = true, silent = true})
+key('n', '<leader>gr', ':DiffviewOpen main<CR>', { noremap = true, silent = true})
+key('v', '<leader>gr', ':DiffviewOpen main<CR>', { noremap = true, silent = true})
+key('n', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = true})
+key('v', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
 
 -- Terminal
