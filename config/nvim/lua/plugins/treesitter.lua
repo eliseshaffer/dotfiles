@@ -1,9 +1,9 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 'ruby', 'javascript', 'json', 'html', 'css', 'lua', 'vim' },
+  ensure_installed = { 'ruby', 'javascript', 'json', 'html', 'css', 'lua', 'vim', 'scss' },
   ignore_installed = { "markdown" },
   highlight = {
     enable = true,              -- false will disable the whole extension
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   },
   rainbow = {
     enable = true,
