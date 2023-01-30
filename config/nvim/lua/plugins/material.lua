@@ -33,3 +33,4 @@ require('material').setup({
   lualine_style = 'default'
 })
 
+vim.cmd "colorscheme material"
