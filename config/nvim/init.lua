@@ -23,6 +23,7 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 vim.api.nvim_command([[
   autocmd WinEnter,FocusGained * :setlocal number relativenumber
   autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
+  autocmd BufRead *.rbs :setlocal ft=rbs
 ]])
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {

@@ -48,6 +48,7 @@ require('packer').startup(function(use)
   }
   use { 'p00f/nvim-ts-rainbow' }
   use { 'sheerun/vim-polyglot' }
+  use { 'jlcrochet/vim-rbs' }
   use { 'preservim/vim-pencil' }
   use {
     "SmiteshP/nvim-gps",

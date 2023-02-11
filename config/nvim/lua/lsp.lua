@@ -23,6 +23,9 @@ nvim_lsp.tsserver.setup{
 nvim_lsp.solargraph.setup{
   capabilities = capabilities
 }
+
+nvim_lsp.steep.setup{}
+
 nvim_lsp.cssls.setup{
   capabilities = capabilities
 }
