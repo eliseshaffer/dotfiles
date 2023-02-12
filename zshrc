@@ -30,7 +30,7 @@ function precmd {
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
 
-nvm use
+nvm use --silent
 
 export PROMPT='
 %{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_version)%{$reset_color%}  %{$fg_bold[green]%} $(node --version)%{$reset_color%}  %{$fg_bold[magenta]%} %@%{$reset_color%}
@@ -56,7 +56,7 @@ else
   export HOMEBREW_DIR="/opt/homebrew"
 fi
 
-ssh-add --apple-use-keychain
+ssh-add --apple-use-keychain -q
 
 [[ -f ~/.overrides ]] && source ~/.overrides
 [[ -f ~/.zshrc.private ]] && source ~/.zshrc.private
