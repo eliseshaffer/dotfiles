@@ -86,7 +86,7 @@ require('packer').startup(function(use)
   }
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'preservim/nerdcommenter' }
-  use { 'npxbr/glow.nvim' } -- Markdown Previewer
+  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
   use { 'fgheng/winbar.nvim', config = function() require 'plugins.winbar' end }
