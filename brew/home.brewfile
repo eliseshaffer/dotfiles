@@ -37,6 +37,7 @@ brew 'ripgrep'
 brew "wget"
 brew "fzf"
 brew "ag"
+brew "nb" # notes
 
 # Applications
 cask 'google-chrome'
@@ -57,6 +58,7 @@ cask 'dash'
 cask '1password'
 cask 'typora'
 cask 'spotify'
+cask "omnigraffle"
 
 # Drivers
 cask 'logitech-options'
