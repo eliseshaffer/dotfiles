@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 #taps
-tap "heroku/brew"
 tap "fbsb/flutter"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
@@ -24,7 +23,6 @@ brew 'jq'
 brew 'git'
 brew 'git-lfs'
 brew 'httpie'
-brew 'heroku'
 brew 'postgresql'
 brew 'redis'
 brew 'libxml2'
