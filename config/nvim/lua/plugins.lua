@@ -75,11 +75,9 @@ require('packer').startup(function(use)
           mode = 'custom',
           light_mode_callback = function()
             require('material.functions').change_style("lighter")
-            vim.go.background = 'light'
           end,
           dark_mode_callback = function()
             require('material.functions').change_style("palenight")
-            vim.go.background = 'dark'
           end
       })
     end

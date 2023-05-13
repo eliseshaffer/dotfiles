@@ -84,7 +84,7 @@ key('n', '<leader>v', '"*p', {})
 
 -- Colors
 -- -------------------------------------------------------------------------------------------
-key('n', '<leader>kt', ":lua require('darklight').color_switch()<CR>", { noremap = true})
+key('n', '<leader>kt', ":lua require('darklight').color_switch()<CR>", { noremap = true })
 
 -- Files (NvimTree / Telescope)
 -- -------------------------------------------------------------------------------------------
