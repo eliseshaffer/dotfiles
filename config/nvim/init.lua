@@ -69,22 +69,6 @@ vim.api.nvim_command 'colorscheme material'
 
 -- -------------------------------------------------------------------------------------------
 --
--- Custom Functions
---
--- -------------------------------------------------------------------------------------------
-function color_switch()
-  local currentColor = vim.go.background
-  if currentColor == 'dark' then
-    vim.go.background = 'light'
-    require('material.functions').change_style("lighter")
-  else
-    vim.go.background = 'dark'
-    require('material.functions').change_style("palenight")
-  end
-end
-
--- -------------------------------------------------------------------------------------------
---
 -- Keymaps
 --
 -- -------------------------------------------------------------------------------------------
@@ -100,7 +84,7 @@ key('n', '<leader>v', '"*p', {})
 
 -- Colors
 -- -------------------------------------------------------------------------------------------
-key('n', '<leader>kt', ":lua color_switch()<CR>", { noremap = true})
+key('n', '<leader>kt', ":lua require('darklight').color_switch()<CR>", { noremap = true})
 
 -- Files (NvimTree / Telescope)
 -- -------------------------------------------------------------------------------------------
