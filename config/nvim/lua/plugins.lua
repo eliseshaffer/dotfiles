@@ -22,7 +22,20 @@ require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
   -- File Management
-  use { 'kyazdani42/nvim-tree.lua', config = function() require 'plugins.nvimtree' end  }
+  -- use { 'kyazdani42/nvim-tree.lua', config = function() require 'plugins.nvimtree' end  }
+
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require 'plugins.neotree'
+    end
+  }
   use { 'nvim-lua/plenary.nvim' } -- Required for telescope
   use { 'nvim-telescope/telescope.nvim', config = function() require 'plugins.telescope' end }
 
@@ -63,6 +76,13 @@ require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function() require 'plugins.lualine' end 
+  }
+  use {
+    's1n7ax/nvim-window-picker',
+    tag = 'v1.*',
+    config = function()
+        require'window-picker'.setup()
+    end,
   }
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
