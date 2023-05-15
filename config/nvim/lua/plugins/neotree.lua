@@ -1,6 +1,16 @@
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 require('neo-tree').setup({
+    event_handlers = {
+      {
+        event = "neo_tree_buffer_enter",
+        handler = function(arg)
+          vim.cmd [[
+          setlocal relativenumber
+        ]]
+        end,
+      }
+    },
     window = {
       position = "right",
       width = 40,
@@ -72,11 +82,8 @@ require('neo-tree').setup({
   })
 
 vim.cmd([[
-highlight! link NeoTreeDirectoryIcon NvimTreeFolderIcon
-highlight! link NeoTreeDirectoryName NvimTreeFolderName
-highlight! link NeoTreeSymbolicLinkTarget NvimTreeSymlink
-highlight! link NeoTreeRootName NvimTreeRootFolder
-highlight! link NeoTreeDirectoryName NvimTreeOpenedFolderName
-highlight! link NeoTreeFileNameOpened NvimTreeOpenedFile
+highlight! link NeoTreeTabInactive NvimTreeNormal
+highlight! link NeoTreeTitleBar NvimTreeNormal
+highlight! link NeoTreeNormalNC NvimTreeNormal
 highlight! link NeoTreeNormal NvimTreeNormal
 ]])
