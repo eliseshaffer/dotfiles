@@ -70,3 +70,13 @@ require('neo-tree').setup({
       }
     }
   })
+
+vim.cmd([[
+highlight! link NeoTreeDirectoryIcon NvimTreeFolderIcon
+highlight! link NeoTreeDirectoryName NvimTreeFolderName
+highlight! link NeoTreeSymbolicLinkTarget NvimTreeSymlink
+highlight! link NeoTreeRootName NvimTreeRootFolder
+highlight! link NeoTreeDirectoryName NvimTreeOpenedFolderName
+highlight! link NeoTreeFileNameOpened NvimTreeOpenedFile
+highlight! link NeoTreeNormal NvimTreeNormal
+]])
