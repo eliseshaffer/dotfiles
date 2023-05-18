@@ -59,7 +59,7 @@ require('packer').startup(function(use)
     run = ':TSUpdate',
     config = function() require 'plugins.treesitter' end
   }
-  use { 'p00f/nvim-ts-rainbow' }
+  use { 'HiPhish/nvim-ts-rainbow2' }
   use { 'sheerun/vim-polyglot' }
   use { 'jlcrochet/vim-rbs' }
   use { 'preservim/vim-pencil' }
@@ -91,6 +91,7 @@ require('packer').startup(function(use)
   -- Colors
   use { 'eliseshaffer/vim-one' }
   use { 'marko-cerovac/material.nvim', config = function() require 'plugins.material' end }
+  use 'folke/tokyonight.nvim'
   use { 'eliseshaffer/darklight.nvim', config = function() require('darklight').setup({
           mode = 'custom',
           light_mode_callback = function()
