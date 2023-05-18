@@ -83,8 +83,12 @@ require('neo-tree').setup({
   })
 
 vim.cmd([[
+autocmd ColorScheme * highlight! link NeoTreeTabInactive NvimTreeNormal
+autocmd ColorScheme * highlight! link NeoTreeTitleBar NvimTreeNormal
+autocmd ColorScheme * highlight! link NeoTreeNormalNC NvimTreeNormalNC
+autocmd ColorScheme * highlight! link NeoTreeNormal NvimTreeNormal
 highlight! link NeoTreeTabInactive NvimTreeNormal
 highlight! link NeoTreeTitleBar NvimTreeNormal
-highlight! link NeoTreeNormalNC NvimTreeNormal
+highlight! link NeoTreeNormalNC NvimTreeNormalNC
 highlight! link NeoTreeNormal NvimTreeNormal
 ]])
