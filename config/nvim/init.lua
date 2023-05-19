@@ -39,7 +39,7 @@ vim.api.nvim_create_autocmd({ "BufRead","BufNewFile" }, {
 
 vim.cmd([[
   autocmd CursorHold * :checktime
-  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'neo-tree filesystem [' . tabpagenr() . ']' | quit | endif
 ]])
 
 if vim.fn.has("termguicolors") == 1 then
