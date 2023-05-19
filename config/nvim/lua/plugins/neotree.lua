@@ -86,9 +86,11 @@ vim.cmd([[
 autocmd ColorScheme * highlight! link NeoTreeTabInactive NvimTreeNormal
 autocmd ColorScheme * highlight! link NeoTreeTitleBar NvimTreeNormal
 autocmd ColorScheme * highlight! link NeoTreeNormal NvimTreeNormal
-autocmd ColorScheme * highlight! link NeoTreeCursorLine NeoTreeNormalNC
+autocmd ColorScheme * highlight! link NeoTreeCursorLine Normal
+autocmd ColorScheme * highlight! link NeoTreeNormalNC NvimTreeNormalNC
 highlight! link NeoTreeTabInactive NvimTreeNormal
 highlight! link NeoTreeTitleBar NvimTreeNormal
 highlight! link NeoTreeNormal NvimTreeNormal
-highlight! link NeoTreeCursorLine NeoTreeNormalNC
+highlight! link NeoTreeCursorLine Normal
+highlight! link NeoTreeNormalNC NvimTreeNormalNC
 ]])
