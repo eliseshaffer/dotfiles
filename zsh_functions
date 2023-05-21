@@ -66,8 +66,7 @@ function switchtheme() {
     export COLOR="dark"
   else
     export COLOR="light"
-  end
-
+  fi
 }
 
 function toggle_profile() {
