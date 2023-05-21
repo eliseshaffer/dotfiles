@@ -58,15 +58,15 @@ require('plugins')
 require('plugins.treesitter')
 require('lsp')
 
-local currentColor = vim.go.background
+-- local currentColor = vim.go.background
 
-if currentColor == 'dark' then
-    vim.g.material_style = "palenight"
-else
-    vim.g.material_style = "lighter"
-end
+-- if currentColor == 'dark' then
+    -- vim.g.material_style = "palenight"
+-- else
+    -- vim.g.material_style = "lighter"
+-- end
 
-vim.api.nvim_command 'colorscheme material'
+vim.api.nvim_command 'colorscheme catppuccin'
 
 -- -------------------------------------------------------------------------------------------
 --
@@ -155,4 +155,3 @@ key('v', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = tr
 -- key('n', '<C-}>', ':ToggleTerm size=20 dir=~/Desktop direction=horizontal<CR>', { noremap = false, silent = true})
 -- key('n', '<C-\>', ':ToggleTerm size=80 dir=~/Desktop direction=float<CR>', { noremap = false, silent = true})
 -- -------------------------------------------------------------------------------------------
-

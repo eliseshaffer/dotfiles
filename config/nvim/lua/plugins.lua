@@ -91,16 +91,29 @@ require('packer').startup(function(use)
   -- Colors
   use { 'eliseshaffer/vim-one' }
   use { 'marko-cerovac/material.nvim', config = function() require 'plugins.material' end }
-  use 'folke/tokyonight.nvim'
-  use { 'eliseshaffer/darklight.nvim', config = function() require('darklight').setup({
-          mode = 'custom',
-          light_mode_callback = function()
-            require('material.functions').change_style("lighter")
-          end,
-          dark_mode_callback = function()
-            require('material.functions').change_style("palenight")
-          end
+  use { 
+    "catppuccin/nvim", 
+    as = "catppuccin",
+    config = function() 
+      require("catppuccin").setup({
+        flavour = "macchiato", -- latte, frappe, macchiato, mocha
+        background = { -- :h background
+          light = "latte",
+          dark = "macchiato",
+        },
       })
+    end
+  }
+  use 'folke/tokyonight.nvim'
+  use { 'eliseshaffer/darklight.nvim', config = function() require('darklight').setup()
+          -- mode = 'custom',
+          -- light_mode_callback = function()
+            -- require('material.functions').change_style("lighter")
+          -- end,
+          -- dark_mode_callback = function()
+            -- require('material.functions').change_style("palenight")
+          -- end
+      -- })
     end
   }
 
