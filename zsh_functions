@@ -62,7 +62,8 @@ function switchtheme() {
   echo "Switching Theme to: ${1}"
 
   it2prof "${1}"
-  if [[${COLOR} == "light"]]; then
+
+  if [[ ${COLOR} == "light" ]]; then
     export COLOR="dark"
   else
     export COLOR="light"
