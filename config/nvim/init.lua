@@ -48,7 +48,6 @@ if vim.fn.has("termguicolors") == 1 then
   vim.opt.termguicolors = true
 end
 
-vim.go.background = vim.env.COLOR
 -- -------------------------------------------------------------------------------------------
 --
 -- Plugin Configs
@@ -58,15 +57,7 @@ require('plugins')
 require('plugins.treesitter')
 require('lsp')
 
--- local currentColor = vim.go.background
-
--- if currentColor == 'dark' then
-    -- vim.g.material_style = "palenight"
--- else
-    -- vim.g.material_style = "lighter"
--- end
-
--- vim.api.nvim_command 'colorscheme catppuccin'
+vim.go.background = vim.env.COLOR
 
 -- -------------------------------------------------------------------------------------------
 --

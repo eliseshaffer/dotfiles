@@ -96,14 +96,13 @@ require('packer').startup(function(use)
     as = "catppuccin",
     config = function() 
       require("catppuccin").setup({
-        flavour = "macchiato", -- latte, frappe, macchiato, mocha
         background = { -- :h background
           light = "latte",
           dark = "macchiato",
         },
       })
 
-      vim.cmd[[colorscheme catppuccin]]
+      vim.cmd [[colorscheme catppuccin]]
     end
   }
   use 'folke/tokyonight.nvim'
