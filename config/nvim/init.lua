@@ -66,7 +66,7 @@ require('lsp')
     -- vim.g.material_style = "lighter"
 -- end
 
-vim.api.nvim_command 'colorscheme catppuccin'
+-- vim.api.nvim_command 'colorscheme catppuccin'
 
 -- -------------------------------------------------------------------------------------------
 --

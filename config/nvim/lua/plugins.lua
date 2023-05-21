@@ -102,6 +102,8 @@ require('packer').startup(function(use)
           dark = "macchiato",
         },
       })
+
+      vim.cmd[[colorscheme catppuccin]]
     end
   }
   use 'folke/tokyonight.nvim'
