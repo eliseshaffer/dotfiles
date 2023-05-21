@@ -26,3 +26,7 @@ export FZF_DEFAULT_COMMAND='ag --ignore node_modules/ --ignore .git/ --hidden -g
 #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# colors
+export LIGHT_MODE_ITERM="catppuccin-latte"
+export DARK_MODE_ITERM="catppuccin-macchiato"
+

@@ -62,14 +62,19 @@ function switchtheme() {
   echo "Switching Theme to: ${1}"
 
   it2prof "${1}"
-  export COLOR="$1"
+  if [[${COLOR} == "light"]]; then
+    export COLOR="dark"
+  else
+    export COLOR="light"
+  end
+
 }
 
 function toggle_profile() {
   if [[ ${COLOR} == "dark" ]]; then
-    switchtheme light
+    switchtheme $LIGHT_MODE_ITERM
   else
-    switchtheme dark
+    switchtheme $DARK_MODE_ITERM
   fi
 }
 
