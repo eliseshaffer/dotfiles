@@ -84,6 +84,20 @@ require('packer').startup(function(use)
         require'window-picker'.setup()
     end,
   }
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+  use { 'sickill/vim-pasta' }
+  use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup() end }
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'ryanoasis/vim-devicons' }
