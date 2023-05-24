@@ -15,7 +15,7 @@ end
 
 -- vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 
-require('packer').init({max_jobs = 10})
+require('packer').init({ max_jobs = 10 })
 
 require('packer').startup(function(use)
   -- manage Packer itself
@@ -27,7 +27,7 @@ require('packer').startup(function(use)
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
@@ -75,13 +75,13 @@ require('packer').startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function() require 'plugins.lualine' end 
+    config = function() require 'plugins.lualine' end
   }
   use {
     's1n7ax/nvim-window-picker',
     tag = 'v1.*',
     config = function()
-        require'window-picker'.setup()
+      require 'window-picker'.setup()
     end,
   }
   use {
@@ -105,12 +105,13 @@ require('packer').startup(function(use)
   -- Colors
   use { 'eliseshaffer/vim-one' }
   use { 'marko-cerovac/material.nvim', config = function() require 'plugins.material' end }
-  use { 
-    "catppuccin/nvim", 
+  use {
+    "catppuccin/nvim",
     as = "catppuccin",
-    config = function() 
+    config = function()
       require("catppuccin").setup({
-        background = { -- :h background
+        background = {
+          -- :h background
           light = "latte",
           dark = "macchiato",
         },
@@ -120,16 +121,17 @@ require('packer').startup(function(use)
     end
   }
   use 'folke/tokyonight.nvim'
-  use { 'eliseshaffer/darklight.nvim', config = function() require('darklight').setup()
-          -- mode = 'custom',
-          -- light_mode_callback = function()
-            -- require('material.functions').change_style("lighter")
-          -- end,
-          -- dark_mode_callback = function()
-            -- require('material.functions').change_style("palenight")
-          -- end
-      -- })
-    end
+  use { 'eliseshaffer/darklight.nvim', config = function()
+    require('darklight').setup()
+    -- mode = 'custom',
+    -- light_mode_callback = function()
+    -- require('material.functions').change_style("lighter")
+    -- end,
+    -- dark_mode_callback = function()
+    -- require('material.functions').change_style("palenight")
+    -- end
+    -- })
+  end
   }
 
   -- Tools
@@ -137,16 +139,16 @@ require('packer').startup(function(use)
   use { "pocco81/auto-save.nvim" }
   use { 'ur4ltz/move.nvim' }
   use { 'lewis6991/gitsigns.nvim',
-    requires = {'nvim-lua/plenary.nvim'},
+    requires = { 'nvim-lua/plenary.nvim' },
     config = function() require 'plugins.gitsigns' end
   }
   use { 'TimUntersberger/neogit',
-    requires = {'nvim-lua/plenary.nvim'},
+    requires = { 'nvim-lua/plenary.nvim' },
     config = function() require 'plugins.neogit' end
   }
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'preservim/nerdcommenter' }
-  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+  use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
   -- use { 'fgheng/winbar.nvim', config = function() require 'plugins.winbar' end }
@@ -156,7 +158,7 @@ require('packer').startup(function(use)
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons", -- optional dependency
     },
-    after = "nvim-web-devicons", -- keep this if you're using NvChad
+    after = "nvim-web-devicons",     -- keep this if you're using NvChad
     config = function()
       require("barbecue").setup()
     end,
@@ -165,20 +167,20 @@ require('packer').startup(function(use)
   -- use { 'ptzz/lf.vim' }
   -- use { 'voldikss/vim-floaterm' }
   -- Start Screen
-  use { 'goolord/alpha-nvim', 
-    config = function() 
+  use { 'goolord/alpha-nvim',
+    config = function()
       require 'plugins.alpha'
     end
   }
   -- use { 'rmagatti/auto-session' }
   -- use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
   use { 'blaineventurine/sessionable',
-    config = function()  
+    config = function()
       require("sessionable").setup({
-          session_dir = "$HOME/.local/share/nvim/session/",
-          log_level = "debug"
-        })
-    end 
+        session_dir = "$HOME/.local/share/nvim/session/",
+        log_level = "debug"
+      })
+    end
   }
 
   if packer_bootstrap then
@@ -207,5 +209,4 @@ end)
 -- require("plugins.winbar")
 
 vim.g.NERDSpaceDelims = 1
-require'luasnip'.filetype_extend("ruby", {"rails"})
-
+require 'luasnip'.filetype_extend("ruby", { "rails" })
