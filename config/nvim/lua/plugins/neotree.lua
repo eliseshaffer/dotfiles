@@ -97,5 +97,5 @@ highlight! link NeoTreeTabInactive NvimTreeNormal
 highlight! link NeoTreeTitleBar NvimTreeNormal
 highlight! link NeoTreeNormal NvimTreeNormal
 highlight! link NeoTreeCursorLine Normal
-highlight! link NeoTreeNormalNC NvimTreeNormalNC
+highlight! link NeoTreeNormalNC NvimTreeNormal
 ]])
