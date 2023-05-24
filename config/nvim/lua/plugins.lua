@@ -149,7 +149,18 @@ require('packer').startup(function(use)
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
-  use { 'fgheng/winbar.nvim', config = function() require 'plugins.winbar' end }
+  -- use { 'fgheng/winbar.nvim', config = function() require 'plugins.winbar' end }
+  use {
+    "utilyre/barbecue.nvim",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    after = "nvim-web-devicons", -- keep this if you're using NvChad
+    config = function()
+      require("barbecue").setup()
+    end,
+  }
   -- use { "akinsho/toggleterm.nvim" } -- Opens a terminal
   -- use { 'ptzz/lf.vim' }
   -- use { 'voldikss/vim-floaterm' }
