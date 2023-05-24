@@ -92,7 +92,7 @@ autocmd ColorScheme * highlight! link NeoTreeTabInactive NvimTreeNormal
 autocmd ColorScheme * highlight! link NeoTreeTitleBar NvimTreeNormal
 autocmd ColorScheme * highlight! link NeoTreeNormal NvimTreeNormal
 autocmd ColorScheme * highlight! link NeoTreeCursorLine Normal
-autocmd ColorScheme * highlight! link NeoTreeNormalNC NvimTreeNormalNC
+autocmd ColorScheme * highlight! link NeoTreeNormalNC NvimTreeNormal
 highlight! link NeoTreeTabInactive NvimTreeNormal
 highlight! link NeoTreeTitleBar NvimTreeNormal
 highlight! link NeoTreeNormal NvimTreeNormal
