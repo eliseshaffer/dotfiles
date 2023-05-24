@@ -13,7 +13,7 @@ source $HOMEBREW_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh_functions
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
-source $HOME/.environment
+# source $HOME/.environment
 
 if [[ -f "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh" ]]; then
     source "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh"
