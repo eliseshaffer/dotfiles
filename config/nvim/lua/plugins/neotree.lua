@@ -74,10 +74,15 @@ require('neo-tree').setup({
       follow_current_file = true,
       filtered_items = {
         visible = true, -- when true, they will just be displayed differently than normal items
-        hide_dotfiles = false,
-        hide_gitignored = false,
+        hide_dotfiles = true,
+        hide_gitignored = true,
         show_hidden_count = true,
-        hide_hidden = false
+        hide_hidden = false,
+        never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+          ".DS_Store",
+          "thumbs.db",
+          ".git",
+        },
       }
     }
   })
