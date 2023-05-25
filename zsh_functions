@@ -54,27 +54,19 @@ function app() {
     fi
 }
 
-it2prof() {
-  echo -e "\033]50;SetProfile=$1\a"
-}
-
-function switchtheme() {
+function change_profile() {
   echo "Switching Theme to: ${1}"
-
-  it2prof "${1}"
-
-  if [[ ${COLOR} == "light" ]]; then
-    export COLOR="dark"
-  else
-    export COLOR="light"
-  fi
+  echo -e "\033]50;SetProfile=$1\a"
+  export ITERM_PROFILE=${1}
 }
 
 function toggle_profile() {
   if [[ ${COLOR} == "dark" ]]; then
-    switchtheme $LIGHT_MODE_ITERM
+    change_profile $LIGHT_MODE_ITERM
+    export COLOR="light"
   else
-    switchtheme $DARK_MODE_ITERM
+    change_profile $DARK_MODE_ITERM
+    export COLOR="dark"
   fi
 }
 

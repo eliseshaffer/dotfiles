@@ -97,8 +97,6 @@ alias h="heroku"
 alias hr="heroku run"
 
 # theme switching
-alias light="switchtheme light"
-alias dark="switchtheme dark"
 alias kt="toggle_profile"
 
 alias k="kubectl"

@@ -18,7 +18,6 @@ export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 export CODE_HOME="${HOME}/code"
-export COLOR="dark"
 export HOMEBREW_BUNDLE_NO_LOCK=true
 export AWS_PROFILE=Engineering-823104324086
 
@@ -26,7 +25,11 @@ export FZF_DEFAULT_COMMAND='ag --ignore node_modules/ --ignore .git/ --hidden -g
 #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# colors
+# ##############################################################
+#
+# Colors
+#
+# ##############################################################
+export COLOR="dark"
 export LIGHT_MODE_ITERM="catppuccin-latte"
 export DARK_MODE_ITERM="catppuccin-macchiato"
-
