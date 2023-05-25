@@ -121,6 +121,7 @@ require('packer').startup(function(use)
     end
   }
   use 'folke/tokyonight.nvim'
+  -- use { '~/code/neovim/darklight.nvim', config = function()
   use { 'eliseshaffer/darklight.nvim', config = function()
     require('darklight').setup()
     -- mode = 'custom',
