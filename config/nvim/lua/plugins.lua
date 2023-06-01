@@ -110,6 +110,7 @@ require('packer').startup(function(use)
     as = "catppuccin",
     config = function()
       require("catppuccin").setup({
+        flavour = "macchiato",
         background = {
           -- :h background
           light = "latte",
