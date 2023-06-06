@@ -57,8 +57,6 @@ require('plugins')
 require('plugins.treesitter')
 require('lsp')
 
-vim.go.background = vim.env.COLOR
-
 -- -------------------------------------------------------------------------------------------
 --
 -- Keymaps
