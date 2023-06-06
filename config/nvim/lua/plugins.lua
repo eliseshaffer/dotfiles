@@ -109,16 +109,7 @@ require('packer').startup(function(use)
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
-      require("catppuccin").setup({
-        flavour = "macchiato",
-        background = {
-          -- :h background
-          light = "latte",
-          dark = "macchiato",
-        },
-      })
-
-      vim.cmd [[colorscheme catppuccin]]
+      require 'plugins.catppuccin'
     end
   }
   use 'folke/tokyonight.nvim'
