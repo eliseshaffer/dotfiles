@@ -70,7 +70,7 @@ require('packer').startup(function(use)
   require("nvim-gps").setup()
 
   -- UI
-  use { 'romgrk/barbar.nvim', config = function() require('plugins.barbar') end }
+  -- use { 'romgrk/barbar.nvim', config = function() require('plugins.barbar') end }
   -- use { 'feline-nvim/feline.nvim', tag = 'v0.4.0' }
   use {
     'nvim-lualine/lualine.nvim',
