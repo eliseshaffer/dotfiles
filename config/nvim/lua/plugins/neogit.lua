@@ -6,4 +6,7 @@ neogit.setup({
   commit_popup = {
     kind = "floating",
   },
+  integrations = {
+    diffview = true,
+  }
 })
