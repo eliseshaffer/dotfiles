@@ -16,6 +16,7 @@ export PATH=$PATH:/$HOME/bin/google-cloud-sdk/bin
 export PATH=$PATH:/$HOME/code/sdks/flutter/bin
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="$RUBY_ROOT/bin:$PATH"
 
 export CODE_HOME="${HOME}/code"
 export HOMEBREW_BUNDLE_NO_LOCK=true
