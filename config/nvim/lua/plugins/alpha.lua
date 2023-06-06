@@ -4,7 +4,7 @@ math.randomseed(os.time())
 local function button(sc, txt, keybind, keybind_opts)
   local b = dashboard.button(sc, txt, keybind, keybind_opts)
   b.opts.hl = "Function"
-  b.opts.hl_shortcut = "Type"
+  -- b.opts.hl_shortcut = "Type"
   return b
 end
 
@@ -32,10 +32,13 @@ local custom_header = {
       [[     I8P    I8  I8, ,8I  I8P    I8P    i8'    ,8I       I8, ,8I  I8P     88   ,8'  Yb   I8, ,8I]],
       [[    ,d8     I8, `YbadP' ,d8b,_ ,d8b,_ ,d8,   ,d8'       `YbadP' ,d8b,_ _,88,_,8'_   8)  `YbadP']],
       [[    88P     `Y8888P"Y8888P'"Y888P'"Y88P"Y8888P"        888P"Y8888P'"Y888P""Y8P' "YY8P8P888P"Y888]],
+      [[ ]],
+      [[ ]],
+      [[ ]],
     },
     opts = {
         position = "center",
-        hl = "Type",
+        hl = "Keyword",
     },
 }
 
@@ -54,8 +57,9 @@ dashboard.section.buttons.val = {
 -- just got the default header, but if I only set the val property, it worked
 -- Why couldn't I set the whole thing?
 dashboard.section.header.val = custom_header.val
+dashboard.section.header.opts = custom_header.opts
 dashboard.section.footer.val = footer()
-dashboard.section.footer.opts.hl = "Constant"
+dashboard.section.footer.opts.hl = "AlphaFooter"
 
 require"alpha".setup(dashboard.opts)
 
