@@ -22,8 +22,6 @@ require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
   -- File Management
-  -- use { 'kyazdani42/nvim-tree.lua', config = function() require 'plugins.nvimtree' end  }
-
   use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -71,7 +69,6 @@ require('packer').startup(function(use)
 
   -- UI
   -- use { 'romgrk/barbar.nvim', config = function() require('plugins.barbar') end }
-  -- use { 'feline-nvim/feline.nvim', tag = 'v0.4.0' }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -116,14 +113,6 @@ require('packer').startup(function(use)
   -- use { '~/code/neovim/darklight.nvim', config = function()
   use { 'eliseshaffer/darklight.nvim', config = function()
     require('darklight').setup()
-    -- mode = 'custom',
-    -- light_mode_callback = function()
-    -- require('material.functions').change_style("lighter")
-    -- end,
-    -- dark_mode_callback = function()
-    -- require('material.functions').change_style("palenight")
-    -- end
-    -- })
   end
   }
 
@@ -144,7 +133,6 @@ require('packer').startup(function(use)
   use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
   use { 'mattn/emmet-vim' }
   use { 'knsh14/vim-github-link' }
-  -- use { 'fgheng/winbar.nvim', config = function() require 'plugins.winbar' end }
   use {
     "utilyre/barbecue.nvim",
     requires = {
@@ -156,17 +144,13 @@ require('packer').startup(function(use)
       require("barbecue").setup()
     end,
   }
-  -- use { "akinsho/toggleterm.nvim" } -- Opens a terminal
-  -- use { 'ptzz/lf.vim' }
-  -- use { 'voldikss/vim-floaterm' }
+
   -- Start Screen
   use { 'goolord/alpha-nvim',
     config = function()
       require 'plugins.alpha'
     end
   }
-  -- use { 'rmagatti/auto-session' }
-  -- use { 'rmagatti/session-lens', requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'} }
   use { 'blaineventurine/sessionable',
     config = function()
       require("sessionable").setup({
@@ -180,26 +164,6 @@ require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
-
--- -------------------------------------------------------------------------------------------
---
--- Plugin Configs
---
--- -------------------------------------------------------------------------------------------
--- require('plugins.nvimtree')
--- require('plugins.telescope')
---require('plugins.lspkind')
--- require('plugins.feline')
--- require('plugins.lualine')
--- require('plugins.material')
--- require('plugins.vim-test')
--- require('plugins.autosave')
--- require("plugins.gitsigns")
--- require("plugins.neogit")
--- require("plugins.nvim-cmp")
--- require("plugins.toggleterm")
--- require("plugins.treesitter")
--- require("plugins.winbar")
 
 vim.g.NERDSpaceDelims = 1
 require 'luasnip'.filetype_extend("ruby", { "rails" })
