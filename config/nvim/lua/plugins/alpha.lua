@@ -16,7 +16,7 @@ local function footer()
     [[ ]],
     [[ ]],
     [[ ]],
-    "[ " .. total_plugins .. " plugins] [ " .. date .. "] [ " .. time .. "]",
+    "[ " .. total_plugins .. " plugins] [ " .. date .. "] [ " .. time .. "]",
   }
 end
 
@@ -49,19 +49,19 @@ local custom_header = {
 
 dashboard.section.buttons.val = {
   button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-  button("s", "  Session", ":SearchSession<CR>"),
-  button("f", "  Find file", ":lua require('telescope.builtin').find_files()<CR>"),
-  button("t", "פּ  File Tree", ":Neotree toggle<CR>"),
+  button("s", "  Session", ":SearchSession<CR>"),
+  button("f", "  Find file", ":lua require('telescope.builtin').find_files()<CR>"),
+  button("t", "󰙅  File Tree", ":Neotree toggle<CR>"),
   button("p", "  Plugins", ":e ~/.config/nvim/lua/plugins.lua<CR>"),
   button("u", "  Sync plugins", ":PackerSync<CR>"),
-  button("q", "  Quit", "<Cmd>qa<CR>"),
+  button("q", "󰗼  Quit", "<Cmd>qa<CR>"),
   button("l", "λ  Update laguage servers", ":LspUpdate<CR>")
 }
 
 dashboard.section.header.val = custom_header.val
 dashboard.section.header.opts = custom_header.opts
 dashboard.section.footer.val = footer()
-dashboard.section.footer.opts.hl = "AlphaFooter"
+-- dashboard.section.footer.opts.hl = "Comment"
 
 require "alpha".setup(dashboard.opts)
 
