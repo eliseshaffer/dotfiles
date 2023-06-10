@@ -39,7 +39,6 @@ require('packer').startup(function(use)
 
   -- LSP
   use { 'neovim/nvim-lspconfig' }
-  -- use { 'onsails/uspkind-nvim'  }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
   use { 'alexaandru/nvim-lspupdate' }
 
@@ -61,14 +60,8 @@ require('packer').startup(function(use)
   use { 'sheerun/vim-polyglot' }
   use { 'jlcrochet/vim-rbs' }
   use { 'preservim/vim-pencil' }
-  use {
-    "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter"
-  }
-  require("nvim-gps").setup()
 
   -- UI
-  -- use { 'romgrk/barbar.nvim', config = function() require('plugins.barbar') end }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -95,6 +88,7 @@ require('packer').startup(function(use)
   }
   use { 'sickill/vim-pasta' }
   use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup() end }
+  
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'ryanoasis/vim-devicons' }
