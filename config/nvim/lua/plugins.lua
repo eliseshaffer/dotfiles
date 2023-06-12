@@ -3,7 +3,6 @@
 -- Plugins
 --
 -- -------------------------------------------------------------------------------------------
---vim.cmd [[packadd packer.nvim]]
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
@@ -48,8 +47,7 @@ require('packer').startup(function(use)
   use { 'saadparwaiz1/cmp_luasnip' }
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'rafamadriz/friendly-snippets' }
-  use { 'windwp/nvim-autopairs' }
-  require('nvim-autopairs').setup()
+  use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
 
   -- Treesitter / Formatting
   use { 'nvim-treesitter/nvim-treesitter',
@@ -88,7 +86,7 @@ require('packer').startup(function(use)
   }
   use { 'sickill/vim-pasta' }
   use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup() end }
-  
+
   -- Icons
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'ryanoasis/vim-devicons' }
