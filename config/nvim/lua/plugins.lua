@@ -74,15 +74,7 @@ require('packer').startup(function(use)
   }
   use {
     "folke/which-key.nvim",
-    config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-      require("which-key").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
+    config = function() require 'plugins.which-key' end
   }
   use { 'sickill/vim-pasta' }
   use { 'karb94/neoscroll.nvim', config = function() require('neoscroll').setup() end }
