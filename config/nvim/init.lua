@@ -145,3 +145,9 @@ key('v', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = tr
 -- key('n', '<C-}>', ':ToggleTerm size=20 dir=~/Desktop direction=horizontal<CR>', { noremap = false, silent = true})
 -- key('n', '<C-\>', ':ToggleTerm size=80 dir=~/Desktop direction=float<CR>', { noremap = false, silent = true})
 -- -------------------------------------------------------------------------------------------
+
+-- Quit Vim
+-- -------------------------------------------------------------------------------------------
+key('n', '<leader>Q', ':wqa<CR>', { noremap = true, silent = true, desc = "Save And Quit" })
+key('v', '<leader>Q', ':wqa<CR>', { noremap = true, silent = true, desc = "Save And Quit" })
+-- -------------------------------------------------------------------------------------------
