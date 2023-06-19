@@ -32,11 +32,6 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     command = "setlocal ft=eruby.html"
 })
 
-vim.api.nvim_create_autocmd({ "BufRead","BufNewFile" }, {
-    pattern = {"*.md", "*COMMIT_EDITMSG"},
-    command = "call pencil#init({'wrap': 'hard', 'autoformat': 0})"
-})
-
 vim.cmd([[
   autocmd CursorHold * :checktime
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'neo-tree filesystem [' . tabpagenr() . ']' | quit | endif
