@@ -101,6 +101,11 @@ require('packer').startup(function(use)
   }
 
   -- Tools
+  use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = function() require 'plugins.ufo' end }
+  use { "luukvbaal/statuscol.nvim", config = function()
+    require("plugins.statuscol")
+  end
+  }
   use { 'vim-test/vim-test', config = function() require 'plugins.vim-test' end }
   use { "pocco81/auto-save.nvim" }
   use { 'ur4ltz/move.nvim' }
