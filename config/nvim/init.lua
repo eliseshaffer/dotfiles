@@ -51,6 +51,7 @@ end
 require('plugins')
 require('plugins.treesitter')
 require('lsp')
+require('tabline')
 
 -- -------------------------------------------------------------------------------------------
 --
