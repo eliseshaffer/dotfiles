@@ -13,7 +13,7 @@ require("statuscol").setup({
   -- Default segments (fold -> sign -> line number + separator), explained below
   segments = {
     {
-      text = { builtin.lnumfunc, " " },
+      text = { "  ", builtin.lnumfunc, " " },
       condition = { true, builtin.not_empty },
       click = "v:lua.ScLa",
     },
