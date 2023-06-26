@@ -33,7 +33,7 @@ function precmd {
 nvm use --silent
 
 export PROMPT='
-%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_version)%{$reset_color%}  %{$fg_bold[green]%} $(node --version)%{$reset_color%}  %{$fg_bold[magenta]%} %@%{$reset_color%}
+%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_version)%{$reset_color%}  %{$fg_bold[green]%} $(node --version)%{$reset_color%}  %{$fg_bold[yellow]%} %@%{$reset_color%}
 %1{🏳️‍⚧️%}  '
 
 export RPROMPT=''
