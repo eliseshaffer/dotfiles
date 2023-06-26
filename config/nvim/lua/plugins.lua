@@ -99,6 +99,7 @@ require('packer').startup(function(use)
     require('darklight').setup()
   end
   }
+  use { "petertriho/nvim-scrollbar", config = function() require("scrollbar").setup() end }
 
   -- Tools
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = function() require 'plugins.ufo' end }
