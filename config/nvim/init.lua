@@ -20,7 +20,7 @@ vim.wo.wrap = false
 vim.o.signcolumn = "auto:4"
 vim.wo.relativenumber = true
 vim.o.updatetime = 1000
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 vim.api.nvim_command([[
   autocmd WinEnter,FocusGained * :setlocal number relativenumber
   autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
@@ -28,8 +28,8 @@ vim.api.nvim_command([[
 ]])
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-    pattern = "*.turbo_stream.erb",
-    command = "setlocal ft=eruby.html"
+  pattern = "*.turbo_stream.erb",
+  command = "setlocal ft=eruby.html"
 })
 
 vim.cmd([[
@@ -63,7 +63,7 @@ local key = vim.api.nvim_set_keymap
 
 -- OS Clipboard
 -- -------------------------------------------------------------------------------------------
-key('v', '<leader>c', '"*y<CR>', {desc = "Copy To Clipboard" })
+key('v', '<leader>c', '"*y<CR>', { desc = "Copy To Clipboard" })
 key('n', '<leader>v', '"*p', { desc = "Paste From Clipboard" })
 -- -------------------------------------------------------------------------------------------
 
@@ -77,7 +77,8 @@ key('n', '<leader>dl', ":DarkLightSwitch<CR>", { noremap = true, desc = "Toggle 
 -- key('n', '<leader>ft', ":Telescope file_browser initial_mode=normal<CR>", { noremap = false })
 key('n', '<leader>ft', ":Neotree toggle<CR>", { noremap = false, desc = "File Tree" })
 key('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<CR>", { noremap = false, desc = "Find Files" })
-key('n', '<leader>fa', ":Telescope find_files find_command=rg,--hidden,--files<CR>", { noremap = false, desc = "Find All Files" })
+key('n', '<leader>fa', ":Telescope find_files find_command=rg,--hidden,--files<CR>",
+  { noremap = false, desc = "Find All Files" })
 key('n', '<leader>fg', ":lua require('telescope.builtin').git_files()<CR>", { noremap = false, desc = "Find Git Files" })
 key('n', '<leader>fs', ":SearchSession<CR>", { noremap = false, desc = "Find Session" })
 key('n', '<leader>s', ":lua require('telescope.builtin').live_grep()<CR>", { noremap = false, desc = "Search Text" })
@@ -109,11 +110,15 @@ key('v', '˚', ":MoveBlock(-1)<CR>", { noremap = true, silent = true })
 -- Code Navigation (LSP)
 -- -------------------------------------------------------------------------------------------
 key('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc = "Go To Definition" })
-key('n', '<leader>gD', ':lua vim.lsp.buf.declaration()<CR>', { noremap = true, silent = true, desc = "Go To Declaration" })
+key('n', '<leader>gD', ':lua vim.lsp.buf.declaration()<CR>',
+  { noremap = true, silent = true, desc = "Go To Declaration" })
 key('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true, desc = "List References" })
-key('n', '<leader>gi', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true, desc = "Goto Implementation"})
-key('n', '<leader>F', ':lua vim.lsp.buf.format({ async = true})<CR>', { noremap = true, silent = true, desc = "Format File"})
-key('n', '<C-k>', ':lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true, desc = "Show Line diagnostics"})
+key('n', '<leader>gi', ':lua vim.lsp.buf.implementation()<CR>',
+  { noremap = true, silent = true, desc = "Goto Implementation" })
+key('n', '<leader>F', ':lua vim.lsp.buf.format({ async = true})<CR>',
+  { noremap = true, silent = true, desc = "Format File" })
+key('n', '<C-k>', ':lua vim.diagnostic.open_float()<CR>',
+  { noremap = true, silent = true, desc = "Show Line diagnostics" })
 -- key('n', '<C-[>', ':lua vim.lsp.diagnostic.goto_prev()<CR>', { noremap = true, silent = true})
 -- key('n', '<C-]>', ':lua vim.lsp.diagnostic.goto_next()<CR>', { noremap = true, silent = true})
 -- -------------------------------------------------------------------------------------------
