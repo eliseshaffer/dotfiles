@@ -141,6 +141,7 @@ require('packer').startup(function(use)
       require("barbecue").setup()
     end,
   }
+  use { 'nanozuki/tabby.nvim', config = function() require('plugins.tabby') end }
   -- use { '~/code/neovim/tabline.nvim', config = function() require('tabline').setup() end }
 
   -- Start Screen
