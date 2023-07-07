@@ -27,7 +27,7 @@ pick_brewfile() {
 cd_and_load_node() {
   cd $@
   if [[ -f ".nvmrc" ]]; then 
-    nvm use
+    nvm use --silent
   fi
 }
 

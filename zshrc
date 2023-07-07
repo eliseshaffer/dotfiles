@@ -30,7 +30,9 @@ function precmd {
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
 
-nvm use --silent
+if [[ -f ".nvmrc" ]]; then 
+  nvm use --silent
+fi
 
 export PROMPT='
 %{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_version)%{$reset_color%}  %{$fg_bold[green]%} $(node --version)%{$reset_color%}  %{$fg_bold[yellow]%} %@%{$reset_color%}
