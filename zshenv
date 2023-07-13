@@ -9,7 +9,7 @@ export ANDROID_HOME=~/Library/Android/sdk/
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 export ANDROID_NDK_HOME=~/Library/Android/ndk
 
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/bin/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=$HOME/.asdf/shims:$HOME/bin:$HOME/.local/bin:$HOME/bin/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:$HOME/toolchain/gcc-arm-none-eabi-4_9-2015q1/bin
 export PATH=$PATH:./node_modules/.bin
 export PATH=$PATH:/$HOME/bin/google-cloud-sdk/bin
