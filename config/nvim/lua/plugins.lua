@@ -150,6 +150,36 @@ require('packer').startup(function(use)
       require 'plugins.alpha'
     end
   }
+  use({
+    "gnikdroy/projections.nvim",
+    branch = "pre_release",
+    config = function()
+      require("projections").setup({
+        workspaces = {
+          { "~/code",        { ".git" } },
+          { "~/code/neovim", { ".git" } },
+        },
+      })
+
+      -- Bind <leader>fp to Telescope projections
+      require('telescope').load_extension('projections')
+      vim.keymap.set("n", "<leader>fp", function() vim.cmd("Telescope projections") end)
+
+      -- Autostore session on VimExit
+      local Session = require("projections.session")
+      vim.api.nvim_create_autocmd({ 'VimLeavePre' }, {
+        callback = function() Session.store(vim.loop.cwd()) end,
+      })
+
+      vim.api.nvim_create_user_command("SaveProjectSession", function()
+        Session.store(vim.loop.cwd())
+      end, {})
+
+      vim.api.nvim_create_user_command("RestoreProjectSession", function()
+        Session.restore(vim.loop.cwd())
+      end, {})
+    end
+  })
   use { 'blaineventurine/sessionable',
     config = function()
       require("sessionable").setup({
