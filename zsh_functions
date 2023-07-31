@@ -47,7 +47,7 @@ function app() {
     APP_DIRECTORY="$(find "${CODE_HOME}" -name "${1}" -maxdepth 2 )"
     APP_DIRECTORY="${APP_DIRECTORY%%$'\n'*}"
     if [[ ${APP_DIRECTORY} == "" ]]; then
-        echo "App doesn't exist"
+        cd_and_load_node "${CODE_HOME}"
     else
         echo "Switching to app directory: ${APP_DIRECTORY}"
         cd_and_load_node "${APP_DIRECTORY}"

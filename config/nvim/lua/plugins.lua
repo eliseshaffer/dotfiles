@@ -180,14 +180,14 @@ require('packer').startup(function(use)
       end, {})
     end
   })
-  use { 'blaineventurine/sessionable',
-    config = function()
-      require("sessionable").setup({
-        session_dir = "$HOME/.local/share/nvim/session/",
-        log_level = "debug"
-      })
-    end
-  }
+  -- use { 'blaineventurine/sessionable',
+    -- config = function()
+      -- require("sessionable").setup({
+        -- session_dir = "$HOME/.local/share/nvim/session/",
+        -- log_level = "debug"
+      -- })
+    -- end
+  -- }
 
   if packer_bootstrap then
     require('packer').sync()

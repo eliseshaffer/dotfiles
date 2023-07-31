@@ -43,12 +43,10 @@ cask 'visual-studio-code'
 cask 'sqlpro-studio'
 cask 'paw'
 cask '1password'
-cask 'viscosity'
 
 # Drivers
 cask 'logitech-options'
 cask 'logitech-camera-settings'
-cask 'docker'
 # cask 'little-snitch'
 cask 'micro-snitch'
 
