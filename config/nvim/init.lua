@@ -64,7 +64,7 @@ local key = vim.api.nvim_set_keymap
 
 -- OS Clipboard
 -- -------------------------------------------------------------------------------------------
-key('v', '<leader>c', '"*y<CR>', { desc = "Copy To Clipboard" })
+key('v', '<leader>c', '"*y<CR>', { noremap = true, desc = "Copy To Clipboard" })
 key('n', '<leader>v', '"*p', { desc = "Paste From Clipboard" })
 -- -------------------------------------------------------------------------------------------
 
