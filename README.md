@@ -7,12 +7,26 @@ Elise Shaffer's dotfiles
 1. XCode && XCode Command Line Tools
 1. You will need to have your ssh-key attached to BOTH your github and gitlab accounts
 
-## Install
+## Linking Dotfiles
 
-In order to install the dotfiles, clone this repo, then run the following:
+I used this method of creatin
 
+```shell
+./install default home
 ```
-scripts/install.sh
+## Post Install Steps
+
+Install the Homebrew bundle:
+
+```shell
+brew bundle --file brew/home.brewfile
+```
+
+Install the latest ruby and node versions:
+
+```shell
+ruby-install --latest
+nvm install --lts
 ```
 
 ## Other Things
