@@ -1,0 +1,18 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.aliases: aliases
+    ~/.config/nvim: config/nvim
+    ~/.gitignore_global: gitignore_global
+    ~/.nvmrc: nvimrc
+    ~/.ruby-version: ruby-version
+    ~/.zsh_functions: zsh_functions
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
