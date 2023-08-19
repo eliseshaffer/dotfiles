@@ -1,0 +1,10 @@
+- defaults:
+    link:
+        relink: true
+
+- link:
+    ~/.gitconfig: git/gitconfig.redcanary
+    ~/Brewfile: brew/redcanary.brewfile
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

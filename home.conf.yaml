@@ -1,0 +1,7 @@
+- defaults:
+    link:
+        relink: true
+
+- link:
+    ~/.gitconfig: git/home.gitconfig
+    ~/Brewfile: brew/home.brewfile
