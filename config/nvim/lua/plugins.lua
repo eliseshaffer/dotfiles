@@ -67,9 +67,24 @@ require('packer').startup(function(use)
   }
   use {
     's1n7ax/nvim-window-picker',
-    tag = 'v1.*',
+    tag = 'v2.*',
     config = function()
-      require 'window-picker'.setup()
+      require('window-picker').setup({
+        highlights = {
+          statusline = {
+            focused = {
+              fg = '#303446',
+              bg = '#a6d189',
+              bold = false,
+            },
+            unfocused = {
+              fg = '#303446',
+              bg = '#babbf1',
+              bold = false,
+            },
+          },
+        },
+      })
     end,
   }
   use {
@@ -180,12 +195,12 @@ require('packer').startup(function(use)
     end
   })
   -- use { 'blaineventurine/sessionable',
-    -- config = function()
-      -- require("sessionable").setup({
-        -- session_dir = "$HOME/.local/share/nvim/session/",
-        -- log_level = "debug"
-      -- })
-    -- end
+  -- config = function()
+  -- require("sessionable").setup({
+  -- session_dir = "$HOME/.local/share/nvim/session/",
+  -- log_level = "debug"
+  -- })
+  -- end
   -- }
 
   if packer_bootstrap then
