@@ -71,15 +71,23 @@ key('n', '<leader>cm', ':Glow<CR>', { noremap = true, silent = true, desc = "Pre
 
 -- Git Tools
 -- -------------------------------------------------------------------------------------------
-key('n', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true, desc = "Get Commit Link" })
-key('v', '<leader>gc', ':GetCommitLink<CR>', { noremap = true, silent = true, desc = "Get Commit Link" })
+key('n', '<leader>grl', ':GetCommitLink<CR>', { noremap = true, silent = true, desc = "Get Remote Link" })
+key('v', '<leader>grl', ':GetCommitLink<CR>', { noremap = true, silent = true, desc = "Get Remote Link" })
 key('n', '<leader>gs', ':Neogit kind=vsplit<CR>', { noremap = true, silent = true, desc = "Git Status" })
 key('v', '<leader>gs', ':Neogit king=vsplit<CR>', { noremap = true, silent = true, desc = "Git Status" })
-key('n', '<leader>gr', ':DiffviewOpen main<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
-key('v', '<leader>gr', ':DiffviewOpen main<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
-key('n', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
-key('v', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
+key('n', '<leader>gdm', ':DiffviewOpen main<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
+key('v', '<leader>gdm', ':DiffviewOpen main<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
+key('n', '<leader>gdM', ':DiffviewOpen master<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
+key('v', '<leader>gdM', ':DiffviewOpen master<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
 -- -------------------------------------------------------------------------------------------
+
+-- Window Managment
+-- -------------------------------------------------------------------------------------------
+key('n', '<leader>wT', ':tabnew<CR>', { noremap = true, silent = true, desc = "Open New Tab" })
+key('n', '<leader>wt', ':tabclose<CR>', { noremap = true, silent = true, desc = "Close Current Tab" })
+key('n', '<leader>ws', ':split<CR>', { noremap = true, silent = true, desc = "Split Horizontally" })
+key('n', '<leader>wv', ':vsplit<CR>', { noremap = true, silent = true, desc = "Split Vertically" })
+key('n', '<leader>wq', '<C-w>q', { noremap = true, silent = true, desc = "Close Current Window" })
 
 -- Quit Vim
 -- -------------------------------------------------------------------------------------------
@@ -117,7 +125,10 @@ wk.register({
   t = "Tests",
   f = "Files",
   p = "Projects",
-  g = "Git",
+  g = {name = "Git",
+    d = "Diff",
+    r = "Remote"
+  },
   c = "Code",
   w = "Window"
 }, { prefix = "<leader>" })
