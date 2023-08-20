@@ -24,27 +24,45 @@ vim.o.updatetime = 1000
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 vim.o.timeout = true
 vim.o.timeoutlen = 300
-vim.api.nvim_command([[
-  autocmd WinEnter,FocusGained * :setlocal number relativenumber
-  autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
-  autocmd BufRead *.rbs :setlocal ft=rbs
-]])
+if vim.fn.has("termguicolors") == 1 then
+  vim.go.t_8f = "[[38;2;%lu;%lu;%lum"
+  vim.go.t_8b = "[[48;2;%lu;%lu;%lum"
+  vim.opt.termguicolors = true
+end
+
+-- -------------------------------------------------------------------------------------------
+--
+-- Autocommands
+--
+-- -------------------------------------------------------------------------------------------
+vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained" }, {
+  pattern = "*",
+  command = "setlocal number relativenumber"
+})
+
+vim.api.nvim_create_autocmd({ "WinLeave", "FocusLost" }, {
+  pattern = "*",
+  command = "setlocal number norelativenumber"
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.rbs",
+  command = "setlocal ft=rbs"
+})
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.turbo_stream.erb",
   command = "setlocal ft=eruby.html"
 })
 
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
+  pattern = "*",
+  command = "checktime"
+})
+
 vim.cmd([[
-  autocmd CursorHold * :checktime
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'neo-tree filesystem [' . tabpagenr() . ']' | quit | endif
 ]])
-
-if vim.fn.has("termguicolors") == 1 then
-  vim.go.t_8f = "[[38;2;%lu;%lu;%lum"
-  vim.go.t_8b = "[[48;2;%lu;%lu;%lum"
-  vim.opt.termguicolors = true
-end
 
 -- -------------------------------------------------------------------------------------------
 --
