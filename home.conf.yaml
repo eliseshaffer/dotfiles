@@ -4,3 +4,4 @@
 
 - link:
     ~/.gitconfig: git/home.gitconfig
+    ~/.hammerspoon: hammerspoon
