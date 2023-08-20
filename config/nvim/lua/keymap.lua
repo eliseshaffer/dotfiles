@@ -7,12 +7,6 @@ vim.g.mapleader = ","
 vim.opt.mouse = "a"
 local key = vim.api.nvim_set_keymap
 
--- OS Clipboard
--- -------------------------------------------------------------------------------------------
-key('v', '<leader>c', '"*y<CR>', { noremap = true, desc = "Copy To Clipboard" })
-key('n', '<leader>v', '"*p', { desc = "Paste From Clipboard" })
--- -------------------------------------------------------------------------------------------
-
 -- Colors
 -- -------------------------------------------------------------------------------------------
 key('n', '<leader>kt', ":DarkLightSwitch<CR>", { noremap = true, desc = "Toggle Night Mode" })
@@ -28,10 +22,12 @@ key('n', '<leader>fa', ":Telescope find_files find_command=rg,--hidden,--files<C
 key('n', '<leader>fg', ":lua require('telescope.builtin').git_files()<CR>", { noremap = false, desc = "Find Git Files" })
 key('n', '<leader>fs', ":Telescope projections<CR>", { noremap = false, desc = "Find Session" })
 key('n', '<leader>s', ":lua require('telescope.builtin').live_grep()<CR>", { noremap = false, desc = "Search Text" })
+
+-- Project Management
+-- -------------------------------------------------------------------------------------------
+key('n', '<leader>pl', ":Telescope projections<CR>", { noremap = false, desc = "List Projects" })
 key('n', '<leader>ps', ":SaveProjectSession<CR>", { noremap = false, desc = "Save Project Session" })
 key('n', '<leader>pr', ":RestoreProjectSession<CR>", { noremap = false, desc = "Restore Project Session" })
-
--- -------------------------------------------------------------------------------------------
 
 -- Tests (vim-test)
 -- -------------------------------------------------------------------------------------------
@@ -68,13 +64,9 @@ key('n', '<leader>cf', ':lua vim.lsp.buf.format({ async = true})<CR>',
   { noremap = true, silent = true, desc = "Format File" })
 key('n', '<C-k>', ':lua vim.diagnostic.open_float()<CR>',
   { noremap = true, silent = true, desc = "Show Line diagnostics" })
+key('n', '<leader>cm', ':Glow<CR>', { noremap = true, silent = true, desc = "Preview markdown" })
 -- key('n', '<C-[>', ':lua vim.lsp.diagnostic.goto_prev()<CR>', { noremap = true, silent = true})
 -- key('n', '<C-]>', ':lua vim.lsp.diagnostic.goto_next()<CR>', { noremap = true, silent = true})
--- -------------------------------------------------------------------------------------------
-
--- Markdown Preview (Glow)
--- -------------------------------------------------------------------------------------------
-key('n', '<leader>cm', ':Glow<CR>', { noremap = true, silent = true, desc = "Preview markdown" })
 -- -------------------------------------------------------------------------------------------
 
 -- Git Tools
@@ -87,12 +79,6 @@ key('n', '<leader>gr', ':DiffviewOpen main<CR>', { noremap = true, silent = true
 key('v', '<leader>gr', ':DiffviewOpen main<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
 key('n', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
 key('v', '<leader>gR', ':DiffviewOpen master<CR>', { noremap = true, silent = true, desc = "Diff Main Branch" })
--- -------------------------------------------------------------------------------------------
-
--- Terminal
--- -------------------------------------------------------------------------------------------
--- key('n', '<C-}>', ':ToggleTerm size=20 dir=~/Desktop direction=horizontal<CR>', { noremap = false, silent = true})
--- key('n', '<C-\>', ':ToggleTerm size=80 dir=~/Desktop direction=float<CR>', { noremap = false, silent = true})
 -- -------------------------------------------------------------------------------------------
 
 -- Quit Vim
