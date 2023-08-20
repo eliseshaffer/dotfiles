@@ -58,13 +58,13 @@ key('v', '˚', ":MoveBlock(-1)<CR>", { noremap = true, silent = true })
 
 -- Code Navigation (LSP)
 -- -------------------------------------------------------------------------------------------
-key('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc = "Go To Definition" })
-key('n', '<leader>gD', ':lua vim.lsp.buf.declaration()<CR>',
+key('n', '<leader>cd', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc = "Go To Definition" })
+key('n', '<leader>cD', ':lua vim.lsp.buf.declaration()<CR>',
   { noremap = true, silent = true, desc = "Go To Declaration" })
-key('n', '<leader>gr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true, desc = "List References" })
-key('n', '<leader>gi', ':lua vim.lsp.buf.implementation()<CR>',
+key('n', '<leader>cr', ':lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true, desc = "List References" })
+key('n', '<leader>ci', ':lua vim.lsp.buf.implementation()<CR>',
   { noremap = true, silent = true, desc = "Goto Implementation" })
-key('n', '<leader>F', ':lua vim.lsp.buf.format({ async = true})<CR>',
+key('n', '<leader>cf', ':lua vim.lsp.buf.format({ async = true})<CR>',
   { noremap = true, silent = true, desc = "Format File" })
 key('n', '<C-k>', ':lua vim.diagnostic.open_float()<CR>',
   { noremap = true, silent = true, desc = "Show Line diagnostics" })
@@ -74,7 +74,7 @@ key('n', '<C-k>', ':lua vim.diagnostic.open_float()<CR>',
 
 -- Markdown Preview (Glow)
 -- -------------------------------------------------------------------------------------------
-key('n', '<leader>md', ':Glow<CR>', { noremap = true, silent = true, desc = "Preview markdown" })
+key('n', '<leader>cm', ':Glow<CR>', { noremap = true, silent = true, desc = "Preview markdown" })
 -- -------------------------------------------------------------------------------------------
 
 -- Git Tools
