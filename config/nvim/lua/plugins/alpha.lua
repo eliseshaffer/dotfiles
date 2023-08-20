@@ -10,7 +10,7 @@ end
 
 local function footer()
   local total_plugins = #vim.tbl_keys(packer_plugins)
-  local date = os.date("%d-%m-%Y")
+  local date = os.date("%m-%d-%Y")
   local time = os.date("%H:%M:%S")
   return {
     [[ ]],
