@@ -26,7 +26,7 @@ key('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<CR>", { n
 key('n', '<leader>fa', ":Telescope find_files find_command=rg,--hidden,--files<CR>",
   { noremap = false, desc = "Find All Files" })
 key('n', '<leader>fg', ":lua require('telescope.builtin').git_files()<CR>", { noremap = false, desc = "Find Git Files" })
-key('n', '<leader>fs', ":SearchSession<CR>", { noremap = false, desc = "Find Session" })
+key('n', '<leader>fs', ":Telescope projections<CR>", { noremap = false, desc = "Find Session" })
 key('n', '<leader>s', ":lua require('telescope.builtin').live_grep()<CR>", { noremap = false, desc = "Search Text" })
 key('n', '<leader>ps', ":SaveProjectSession<CR>", { noremap = false, desc = "Save Project Session" })
 key('n', '<leader>pr', ":RestoreProjectSession<CR>", { noremap = false, desc = "Restore Project Session" })
