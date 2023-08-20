@@ -6,7 +6,7 @@
 
 - link:
     ~/.aliases: aliases
-    # ~/.config/nvim: config/nvim
+    ~/.config/nvim: nvim
     ~/.gitignore_global: gitignore_global
     ~/.nvmrc: nvmrc
     ~/.ruby-version: ruby-version
