@@ -1,6 +1,6 @@
 [user]
 	name = Elise Shaffer
-	email = elise.shaffer@hey.com
+	email = elise@eliseshaffer.com
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = nvim
