@@ -1,7 +1,24 @@
 - defaults:
+    brew:
+        stderr: true
+        stdout: true
     link:
         relink: true
 
 - link:
     ~/.gitconfig: git/home.gitconfig
     ~/.hammerspoon: hammerspoon
+
+- install-brew: true
+
+- tap:
+    - homebrew/cask-fonts
+
+- brew: 
+    - neovim
+
+- cask:
+    - font-fira-code-nerd-font
+
+- brewfile:
+    - brew/home.brewfile

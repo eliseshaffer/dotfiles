@@ -2,7 +2,6 @@ cask_args appdir: '/Applications'
 
 #taps
 tap "homebrew/cask"
-tap "heroku/brew"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-drivers"
 
