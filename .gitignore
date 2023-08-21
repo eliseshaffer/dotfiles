@@ -9,4 +9,4 @@ vim/session/*
 .vim-session
 config/*
 !config/nvim
-config/nvim/plugin/
+nvim/plugin/*
