@@ -4,6 +4,10 @@
         stdout: true
     link:
         relink: true
+    tap:
+        stderr: true
+        stdin: true
+        stdout: true
 
 - link:
     ~/.gitconfig: git/home.gitconfig
