@@ -291,10 +291,26 @@ local plugins = {
       end, {})
     end
   },
+  -- {
+  --   'vim-test/vim-test',
+  --   config = function()
+  --     require 'plugins.vim-test'
+  --   end
+  -- },
   {
-    'vim-test/vim-test',
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "olimorris/neotest-rspec",
+    },
     config = function()
-      require 'plugins.vim-test'
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec")
+        },
+      })
     end
   },
   { "pocco81/auto-save.nvim" },
