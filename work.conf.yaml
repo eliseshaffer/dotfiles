@@ -5,7 +5,7 @@
         relink: true
 
 - link:
-    ~/.gitconfig: git/gitconfig.redcanary
+    ~/.gitconfig: git/redcanary.gitconfig
     ~/Brewfile: brew/redcanary.brewfile
 
 - install-brew: true
