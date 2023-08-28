@@ -11,7 +11,6 @@
 
 - link:
     ~/.gitconfig: git/home.gitconfig
-    ~/.hammerspoon: hammerspoon
 
 - install-brew: true
 
@@ -19,10 +18,46 @@
     - homebrew/cask-fonts
 
 - brew: 
+    - zsh
+    - zsh-syntax-highlighting
+    - zsh-completions
     - neovim
+    - chruby
+    - ruby-install
+    - npm
+    - nvm
+    - yarn
+    - sqlite
+    - jq
+    - git
+    - git-lfs
+    - httpie
+    - postgresql
+    - redis
+    - libxml2
+    - imagemagick
+    - ctags
+    - ripgrep
+    - wget
+    - ag
+    - nb
 
 - cask:
     - font-fira-code-nerd-font
-
-- brewfile:
-    - brew/home.brewfile
+    - google-chrome
+    - iterm2
+    - chromedriver
+    - android-studio
+    - discord
+    - visual-studio-code
+    - firefox
+    - microsoft-edge
+    - hey
+    - sqlpro-studio
+    - dash
+    - 1password
+    - spotify
+    - logitech-camera-settings
+    - font-fira-code
+    - font-fira-code-nerd-font
+    - font-source-sans-pro
