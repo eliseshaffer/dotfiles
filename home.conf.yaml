@@ -41,6 +41,7 @@
     - wget
     - ag
     - nb
+    - gh
 
 - cask:
     - font-fira-code-nerd-font
