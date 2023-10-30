@@ -40,16 +40,15 @@
     - ripgrep
     - wget
     - ag
-    - nb
     - gh
     - tailwindcss
 
 - cask:
     - font-fira-code-nerd-font
     - google-chrome
+    - arc
     - iterm2
     - chromedriver
-    - android-studio
     - discord
     - visual-studio-code
     - firefox
