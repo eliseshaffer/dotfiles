@@ -44,7 +44,7 @@
     - tailwindcss
 
 - cask:
-    - arc
+    # - arc
     - discord
     - firefox
     - microsoft-edge
