@@ -16,3 +16,46 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+
+- install-brew: true
+
+- tap:
+    - homebrew/cask-fonts
+
+- brew: 
+    - zsh
+    - zsh-syntax-highlighting
+    - zsh-completions
+    - neovim
+    - chruby
+    - ruby-install
+    - npm
+    - nvm
+    - yarn
+    - sqlite
+    - jq
+    - git
+    - git-lfs
+    - httpie
+    - postgresql
+    - redis
+    - libxml2
+    - imagemagick
+    - ctags
+    - ripgrep
+    - wget
+    - ag
+    - gh
+    - tailwindcss
+
+- cask:
+    - google-chrome
+    - iterm2
+    - chromedriver
+    - visual-studio-code
+    - sqlpro-studio
+    - 1password
+    - spotify
+    - logitech-camera-settings
+    - font-fira-code
+    - font-fira-code-nerd-font
