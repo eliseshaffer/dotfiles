@@ -10,3 +10,4 @@ vim/session/*
 config/*
 !config/nvim
 nvim/plugin/*
+*lazy-lock.json
