@@ -20,6 +20,8 @@ if [[ -f "${HOMEBREW_DIR}/opt/chruby/share/chruby/chruby.sh" ]]; then
     source "$HOMEBREW_DIR/share/chruby/auto.sh"
 fi
 
+chruby ruby
+
 # Update tab title in iterm to current directory
 function precmd {
   # sets the tab title to current dir
