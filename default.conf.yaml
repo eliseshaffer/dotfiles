@@ -29,7 +29,6 @@
     - neovim
     - chruby
     - ruby-install
-    - npm
     - nvm
     - yarn
     - sqlite
