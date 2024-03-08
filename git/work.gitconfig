@@ -1,6 +1,6 @@
 [user]
 	name = Elise Shaffer
-	email = elise.shaffer@redcanary.com
+	email = elise.shaffer@shopify.com
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = nvim
