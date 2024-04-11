@@ -22,4 +22,5 @@
 	branch = cat
 [init]
 	defaultBranch = main
-
+[include]
+	path = /Users/eliseshaffer/.config/dev/gitconfig
