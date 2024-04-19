@@ -37,7 +37,7 @@ if [[ -f ".nvmrc" ]]; then
 fi
 
 export PROMPT='
-%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_version)%{$reset_color%}  %{$fg_bold[green]%} $(node --version)%{$reset_color%}  %{$fg_bold[yellow]%} %@%{$reset_color%}'
+%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)  %{$fg_bold[red]%} $(ruby_version)%{$reset_color%}  %{$fg_bold[green]%} $(node --version)%{$reset_color%}  %{$fg_bold[yellow]%} %@%{$reset_color%}  '
 
 export RPROMPT=''
 
