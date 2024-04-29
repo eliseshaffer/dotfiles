@@ -1,0 +1,10 @@
+- defaults:
+    brewfile:
+        - stdout: true
+    link:
+        relink: true
+
+- link:
+    ~/.gitconfig: git/work.gitconfig
+    ~/.zshrc: zshrc-shopify
+
