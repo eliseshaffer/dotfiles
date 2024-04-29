@@ -1,0 +1,3 @@
+source ~/.zsh-functions
+source ~/.environment
+source ~/.aliases

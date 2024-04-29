@@ -11,6 +11,7 @@
 
 - link:
     ~/.gitconfig: git/home.gitconfig
+    ~/.zshrc: zshrc
 
 - install-brew: true
 

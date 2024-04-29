@@ -12,7 +12,6 @@
     ~/.ruby-version: ruby-version
     ~/.zsh_functions: zsh_functions
     ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
