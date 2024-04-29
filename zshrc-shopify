@@ -1,3 +1,4 @@
 source ~/.zsh_functions
 source ~/.environment
 source ~/.aliases
+source ~/.zshrc-old
