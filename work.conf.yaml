@@ -16,6 +16,8 @@
 - brew:
     - neovim
     - asdf
+    - zsh
+    - zsh-syntax-highlighting
 
 - cask:
     - font-fira-code-nerd-font
