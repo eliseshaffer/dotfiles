@@ -63,3 +63,4 @@ ssh-add --apple-use-keychain -q
 
 [[ -f ~/.overrides ]] && source ~/.overrides
 [[ -f ~/.zshrc.private ]] && source ~/.zshrc.private
+[[ -f /opt/dev/dev.sh ]] && source /opt/dev/dev.sh
