@@ -10,7 +10,7 @@ fi
 
 plugins=(brew chruby sudo vagrant z git nvm)
 source $HOMEBREW_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zsh_functions
+source $HOME/.functions.sh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 # source $HOME/.environment
