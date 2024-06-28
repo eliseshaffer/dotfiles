@@ -6,5 +6,5 @@
 
 - link:
     ~/.gitconfig: git/work.gitconfig
-    ~/.zshrc: zshrc-shopify
+    ~/.zshrc: zshrc.spin
 
