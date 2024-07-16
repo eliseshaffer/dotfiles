@@ -10,7 +10,7 @@
     ~/.gitignore_global: gitignore_global
     ~/.nvmrc: nvmrc
     ~/.ruby-version: ruby-version
-    ~/.functions.zsh: functions.zsh
+    ~/.functions.sh: functions.sh
     ~/.zshenv: zshenv
 
 - shell:
