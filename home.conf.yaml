@@ -45,6 +45,7 @@
 
 - cask:
     # - arc
+    - chatgpt
     - discord
     - firefox
     - microsoft-edge
