@@ -12,6 +12,7 @@
 - link:
     ~/.gitconfig: git/home.gitconfig
     ~/.zshrc: zshrc
+    ~/.config/oh-my-posh: oh-my-posh
 
 - install-brew: true
 
@@ -42,6 +43,7 @@
     - ag
     - gh
     - tailwindcss
+    - oh-my-posh
 
 - cask:
     # - arc
