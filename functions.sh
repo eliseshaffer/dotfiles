@@ -63,9 +63,11 @@ function change_profile() {
 function toggle_profile() {
   if [[ ${COLOR} == "dark" ]]; then
     change_profile $LIGHT_MODE_ITERM
+    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin-latte.toml)"
     export COLOR="light"
   else
     change_profile $DARK_MODE_ITERM
+    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin-macchiato.toml)"
     export COLOR="dark"
   fi
 }

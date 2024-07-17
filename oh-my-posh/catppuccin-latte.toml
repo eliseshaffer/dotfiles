@@ -1,0 +1,93 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = "time"
+    style = "plain"
+    foreground = "p:yellow"
+    template = " {{ .CurrentDate | date .Format }} "
+
+    [properties]
+    time_format = "15:04:05"
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'plain'
+    template = '  {{ .Path }} '
+    background = ''
+    foreground = 'p:pink'
+    Text = ''
+    Duration = 0
+    NameLength = 0
+
+    [blocks.segments.properties]
+      folder_icon = '....'
+      home_icon = '~'
+      style = 'full'
+
+  [[blocks.segments]]
+    type = "ruby"
+    foreground = "p:red"
+    background = ""
+    template = "  {{ .Full }} "
+
+  [[blocks.segments]]
+    type = "node"
+    foreground = "p:green"
+    background = ""
+    template = "  {{ .Full }} "
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'plain'
+    template = " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+    background = ''
+    foreground = 'p:mauve'
+    Text = ''
+    Duration = 0
+    NameLength = 0
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      cherry_pick_icon = ' '
+      commit_icon = ' '
+      fetch_status = true
+      fetch_upstream_icon = true
+      merge_icon = ' '
+      no_commits_icon = ' '
+      rebase_icon = ' '
+      revert_icon = ' '
+      tag_icon = ' '
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    template = ''
+    background = ''
+    foreground = 'p:closer'
+    Text = ''
+    Duration = 0
+    NameLength = 0
+
+[palette]
+  blue = '#1e66f5'
+  closer = 'p:os'
+  lavender = '#7287FD'
+  os = '#ACB0BE'
+  pink = '#ea76cb'
+  white = '#4c4f69'
+  red = '#d20f39'
+  green = '#40a02b'
+  mauve = '#8839ef'
+  yellow = '#df8e1d'
