@@ -4,6 +4,12 @@
 
 - clean: ['~']
 
+- git:
+    '~/code/nvim':
+       url: git@github.com:eliseshaffer/nvim.git
+       branch: main
+       method: clone-or-pull
+
 - link:
     ~/.aliases: aliases
     ~/.config/nvim: ~/code/nvim
