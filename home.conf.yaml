@@ -16,9 +16,6 @@
 
 - install-brew: true
 
-- tap:
-    - homebrew/cask-fonts
-
 - brew: 
     - zsh
     - zsh-syntax-highlighting
