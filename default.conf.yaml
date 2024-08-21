@@ -18,6 +18,7 @@
     ~/.ruby-version: ruby-version
     ~/.functions.sh: functions.sh
     ~/.zshenv: zshenv
+    ~/.hyper.js: hyper.js
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
