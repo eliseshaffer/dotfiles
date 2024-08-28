@@ -17,47 +17,47 @@
 - install-brew: true
 
 - brew: 
-    - zsh
-    - zsh-syntax-highlighting
-    - zsh-completions
-    - neovim
+    - ag
     - chruby
-    - ruby-install
-    - nvm
-    - yarn
-    - sqlite
-    - jq
+    - ctags
+    - gh
     - git
     - git-lfs
     - httpie
+    - imagemagick
+    - jq
+    - libxml2
+    - neovim
+    - nvm
+    - oh-my-posh
     - postgresql
     - redis
-    - libxml2
-    - imagemagick
-    - ctags
     - ripgrep
-    - wget
-    - ag
-    - gh
+    - ruby-install
+    - sqlite
     - tailwindcss
-    - oh-my-posh
+    - wget
+    - yarn
+    - zsh
+    - zsh-completions
+    - zsh-syntax-highlighting
 
 - cask:
-    # - arc
+    - alfred
+    - blackhole-2ch
     - chatgpt
+    - dash
     - discord
     - firefox
-    - microsoft-edge
-    - hey
-    - sqlpro-studio
-    - dash
-    - spotify
-    - logitech-camera-settings
     - font-source-sans-pro
-    - warp
+    - hey
     - keycastr
-    - alfred
+    - logitech-camera-settings
+    - makemkv
+    - microsoft-edge
+    - raycast
+    - spotify
+    - sqlpro-studio
     - streamlabs
     - tuple
-    - blackhole-2ch
-    - makemkv
+    - warp
