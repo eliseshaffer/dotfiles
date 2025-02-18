@@ -1,30 +1,33 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
-version = 2
+version = 3
 final_space = true
+
+[palette]
+  blue = '#1e66f5'
+  closer = 'p:os'
+  green = '#40a02b'
+  lavender = '#7287FD'
+  mauve = '#8839ef'
+  os = '#ACB0BE'
+  pink = '#ea76cb'
+  red = '#d20f39'
+  white = '#4c4f69'
+  yellow = '#df8e1d'
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = "time"
-    style = "plain"
-    foreground = "p:yellow"
-    template = " {{ .CurrentDate | date .Format }} "
-
-    [properties]
-    time_format = "15:04:05"
+    style = 'plain'
+    template = ' {{ .CurrentDate | date .Format }} '
+    foreground = 'p:yellow'
+    type = 'time'
 
   [[blocks.segments]]
-    type = 'path'
     style = 'plain'
     template = '  {{ .Path }} '
-    background = ''
     foreground = 'p:pink'
-    Text = ''
-    Duration = 0
-    NameLength = 0
+    type = 'path'
 
     [blocks.segments.properties]
       folder_icon = '....'
@@ -32,26 +35,20 @@ final_space = true
       style = 'full'
 
   [[blocks.segments]]
-    type = "ruby"
-    foreground = "p:red"
-    background = ""
-    template = "  {{ .Full }} "
+    template = '  {{ .Full }} '
+    foreground = 'p:red'
+    type = 'ruby'
 
   [[blocks.segments]]
-    type = "node"
-    foreground = "p:green"
-    background = ""
-    template = "  {{ .Full }} "
+    template = '  {{ .Full }} '
+    foreground = 'p:green'
+    type = 'node'
 
   [[blocks.segments]]
-    type = 'git'
     style = 'plain'
-    template = " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
-    background = ''
+    template = ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} '
     foreground = 'p:mauve'
-    Text = ''
-    Duration = 0
-    NameLength = 0
+    type = 'git'
 
     [blocks.segments.properties]
       branch_icon = ''
@@ -71,23 +68,7 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
-    type = 'text'
     style = 'plain'
     template = ''
-    background = ''
     foreground = 'p:closer'
-    Text = ''
-    Duration = 0
-    NameLength = 0
-
-[palette]
-  blue = '#1e66f5'
-  closer = 'p:os'
-  lavender = '#7287FD'
-  os = '#ACB0BE'
-  pink = '#ea76cb'
-  white = '#4c4f69'
-  red = '#d20f39'
-  green = '#40a02b'
-  mauve = '#8839ef'
-  yellow = '#df8e1d'
+    type = 'text'
