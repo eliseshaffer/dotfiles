@@ -10,7 +10,7 @@
         stdout: true
 
 - link:
-    ~/.gitconfig: git/home.gitconfig
+    ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.config/oh-my-posh: oh-my-posh
 
