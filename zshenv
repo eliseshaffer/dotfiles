@@ -19,12 +19,6 @@ export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="$RUBY_ROOT/bin:$PATH"
 
 export CODE_HOME="${HOME}/code"
-export HOMEBREW_BUNDLE_NO_LOCK=true
-export AWS_PROFILE=Engineering-823104324086
-
-export FZF_DEFAULT_COMMAND='ag --ignore node_modules/ --ignore .git/ --hidden -g ""'
-#export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-#export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # ##############################################################
 #
