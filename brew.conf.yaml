@@ -9,11 +9,6 @@
         stdin: true
         stdout: true
 
-- link:
-    ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
-    ~/.config/oh-my-posh: oh-my-posh
-
 - install-brew: true
 
 - brew: 

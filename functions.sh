@@ -1,10 +1,3 @@
-function myreadlink() {
-  (
-  cd "$(find ~/ -name "$1")"        # or  cd ${1%/*}
-  echo "$PWD/$(basename "$1")" # or  echo $PWD/${1##*/}
-  )
-}
-
 # Finds first direction matchern pattern in ${1} and cd's to it
 function app() {
     APP_DIRECTORY="$(find "${CODE_HOME}" -name "${1}" -maxdepth 2 )"
