@@ -18,6 +18,10 @@ final_space = true
   alignment = 'left'
 
   [[blocks.segments]]
+    type = "text"
+    template = "\n"
+
+  [[blocks.segments]]
     style = 'plain'
     template = ' {{ .CurrentDate | date .Format }} '
     foreground = 'p:yellow'
