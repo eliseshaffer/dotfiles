@@ -5,22 +5,15 @@ function myreadlink() {
   )
 }
 
-cd_and_load_node() {
-  cd $@
-  if [[ -f ".nvmrc" ]]; then 
-    nvm use --silent
-  fi
-}
-
 # Finds first direction matchern pattern in ${1} and cd's to it
 function app() {
     APP_DIRECTORY="$(find "${CODE_HOME}" -name "${1}" -maxdepth 2 )"
     APP_DIRECTORY="${APP_DIRECTORY%%$'\n'*}"
     if [[ ${APP_DIRECTORY} == "" ]]; then
-        cd_and_load_node "${CODE_HOME}"
+        cd "${CODE_HOME}"
     else
         echo "Switching to app directory: ${APP_DIRECTORY}"
-        cd_and_load_node "${APP_DIRECTORY}"
+        cd "${APP_DIRECTORY}"
     fi
 }
 
@@ -40,11 +33,6 @@ function toggle_profile() {
     eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin-macchiato.toml)"
     export COLOR="dark"
   fi
-}
-
-function ruby_version() {
-  ruby --version | cut -d ' ' -f1-2 | sed 's/\ /-/'
-  #echo 'ruby-2.6.7'
 }
 
 function draft() {
