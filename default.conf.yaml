@@ -19,6 +19,8 @@
     ~/.functions.sh: functions.sh
     ~/.zshenv: zshenv
     ~/.hyper.js: hyper.js
+    ~/.mise.sh: mise.sh
+    ~/.config/mise.toml: mise.toml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

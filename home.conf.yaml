@@ -41,6 +41,7 @@
     - zsh
     - zsh-completions
     - zsh-syntax-highlighting
+    - mise
 
 - cask:
     - alfred
