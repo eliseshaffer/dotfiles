@@ -5,41 +5,11 @@ function myreadlink() {
   )
 }
 
-pick_brewfile() {
-  echo "Please select the file from the list:"
-
-  files=($(ls brew/*.brewfile))
-  files+=('New')
-
-  select file in $files; do
-    case $file in
-      New)
-        create_brewfile
-        ;;
-      *)
-        link_brewfile $file
-        ;;
-    esac
-    break;
-  done
-}
-
 cd_and_load_node() {
   cd $@
   if [[ -f ".nvmrc" ]]; then 
     nvm use --silent
   fi
-}
-
-create_brewfile() {
-  echo "TODO: This feature isn't ready yet."
-  echo "Please create the file in $DOTFILES/brew/ and run again."
-}
-
-link_brewfile() {
-  target="$DOTFILES_ROOT/$file"
-  dst="$HOME/Brewfile"
-  ln -sFfn "$target" "$dst"
 }
 
 # Finds first direction matchern pattern in ${1} and cd's to it

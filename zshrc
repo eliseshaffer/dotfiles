@@ -1,10 +1,10 @@
+autoload -U +X compinit && compinit
 
 if [[ $(uname -m) = "x86_64" ]]; then
   export HOMEBREW_DIR="/usr/local"
 else
   export HOMEBREW_DIR="/opt/homebrew"
 fi
-autoload -U +X compinit && compinit
 
 source $HOMEBREW_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.functions.sh
@@ -32,12 +32,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_DIR/opt/nvm/etc/bash_completion.d/nvm" ] && . "$HOMEBREW_DIR/opt/nvm/etc/bash_completion.d/nvm"
 
 eval "$($HOMEBREW_DIR/bin/brew shellenv)"
-
-if [[ $(uname -m) = "x86_64" ]]; then
-  export HOMEBREW_DIR="/usr/local"
-else
-  export HOMEBREW_DIR="/opt/homebrew"
-fi
 
 ssh-add --apple-use-keychain -q
 
