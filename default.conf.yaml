@@ -20,10 +20,9 @@
     ~/.zshenv: zshenv
     ~/.hyper.js: hyper.js
     ~/.mise.sh: mise.sh
-    ~/.config/mise.toml: mise.toml
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
-    ~/.config/oh-my-posh: oh-my-posh
+    ~/.config/: config
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
