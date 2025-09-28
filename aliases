@@ -100,4 +100,4 @@ alias hr="heroku run"
 alias kt="toggle_profile"
 
 alias k="kubectl"
-alias fix_chromedriver="xattr -d com.apple.quarantine $(which chromedriver)"
+# alias fix_chromedriver="xattr -d com.apple.quarantine $(which chromedriver)"

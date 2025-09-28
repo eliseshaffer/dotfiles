@@ -1,6 +1,6 @@
 # Finds first direction matchern pattern in ${1} and cd's to it
 function app() {
-    APP_DIRECTORY="$(find "${CODE_HOME}" -name "${1}" -maxdepth 2 )"
+    APP_DIRECTORY="$(find "${CODE_HOME}" -maxdepth 2 -name "${1}" )"
     APP_DIRECTORY="${APP_DIRECTORY%%$'\n'*}"
     if [[ ${APP_DIRECTORY} == "" ]]; then
         cd "${CODE_HOME}"
@@ -40,7 +40,7 @@ function git_clone_and_cd() {
 }
 
 function code_dirs() {
-  find "$HOME/code" -type d -maxdepth 2 -mindepth 1 | grep -vE '.*dotfiles.*' | grep -vE '^\\.'
+  find -type d -maxdepth 2 -mindepth 1 "$HOME/code" | grep -vE '.*dotfiles.*' | grep -vE '^\\.'
 }
 
 function _appcmp() {
