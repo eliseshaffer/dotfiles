@@ -12,6 +12,7 @@ final_space = true
   red = '#ed8796'
   white = '#cad3f5'
   yellow = '#eed49f'
+  rust = '#e89149'
 
 [[blocks]]
   type = 'prompt'
@@ -73,6 +74,6 @@ final_space = true
 
   [[blocks.segments]]
     style = 'plain'
-    template = ''
-    foreground = 'p:closer'
+    template = '󰊬 '
+    foreground = 'p:rust'
     type = 'text'
