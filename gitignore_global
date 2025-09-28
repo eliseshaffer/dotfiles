@@ -5,3 +5,4 @@ Session.vim
 .vscode/
 *.code-workspace
 *.luarc.json
+config*
