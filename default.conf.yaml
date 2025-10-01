@@ -14,15 +14,14 @@
     ~/.aliases: aliases
     ~/.config/nvim: ~/code/nvim
     ~/.gitignore_global: gitignore_global
-    ~/.nvmrc: nvmrc
-    ~/.ruby-version: ruby-version
     ~/.functions.sh: functions.sh
     ~/.zshenv: zshenv
-    ~/.hyper.js: hyper.js
     ~/.mise.sh: mise.sh
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
-    ~/.config/: config
+    ~/.config/ghostty: config/ghostty
+    ~/.config/oh-my-posh: config/oh-my-posh
+    ~/.config/mise.toml: config/mise.toml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
