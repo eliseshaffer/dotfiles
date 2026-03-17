@@ -5,14 +5,14 @@
 - clean: ['~']
 
 - git:
-    '~/code/nvim':
+    '~/src/nvim':
        url: git@github.com:eliseshaffer/nvim.git
        branch: main
        method: clone-or-pull
 
 - link:
     ~/.aliases: aliases
-    ~/.config/nvim: ~/code/nvim
+    ~/.config/nvim: ~/src/nvim
     ~/.gitignore_global: gitignore_global
     ~/.functions.sh: functions.sh
     ~/.zshenv: zshenv
