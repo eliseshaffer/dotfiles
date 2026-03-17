@@ -3,7 +3,7 @@ export VISUAL=$EDITOR
 export PAGER=less
 export CVS_RSH=ssh
 export LESS="-RM"
-export CODE_HOME="${HOME}/code"
+export CODE_HOME="${HOME}/src"
 
 # ##############################################################
 #
