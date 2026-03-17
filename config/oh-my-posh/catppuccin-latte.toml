@@ -69,6 +69,6 @@ final_space = true
 
   [[blocks.segments]]
     style = 'plain'
-    template = ''
+    template = '󱓷 '
     foreground = 'p:closer'
     type = 'text'

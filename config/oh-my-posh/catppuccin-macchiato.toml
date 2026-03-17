@@ -74,6 +74,6 @@ final_space = true
 
   [[blocks.segments]]
     style = 'plain'
-    template = '󰊬 '
-    foreground = 'p:rust'
+    template = '󱓷 '
+    foreground = 'p:blue'
     type = 'text'
