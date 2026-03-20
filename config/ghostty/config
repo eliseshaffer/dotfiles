@@ -53,3 +53,4 @@ command=/usr/bin/zsh
 window-padding-x=7
 window-padding-y=7
 theme=catppuccin-macchiato.conf
+gtk-titlebar-style=tabs
