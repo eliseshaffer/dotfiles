@@ -8,3 +8,4 @@ source $HOME/.mise.sh
 compdef _appcmp app
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin-macchiato.toml)"
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
