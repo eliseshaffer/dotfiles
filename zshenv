@@ -14,3 +14,6 @@ export COLOR="dark"
 export LIGHT_MODE_ITERM="catppuccin-latte"
 export DARK_MODE_ITERM="catppuccin-macchiato"
 . "$HOME/.cargo/env"
+
+export PATH="$HOME/.local/bin:$PATH"
+
