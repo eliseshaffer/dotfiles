@@ -21,6 +21,12 @@ final_space = true
   [[blocks.segments]]
     type = "text"
     template = "\n"
+  
+  [[blocks.segments]]
+      type = "session"
+      alignment = 'left'
+      foreground = 'p:mauve'
+      template = "🧙🏻{{ .UserName }}@{{ .HostName }} "
 
   [[blocks.segments]]
     style = 'plain'
@@ -52,7 +58,7 @@ final_space = true
   [[blocks.segments]]
     style = 'plain'
     template = ' {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} '
-    foreground = 'p:mauve'
+    foreground = 'p:blue'
     type = 'git'
 
     [blocks.segments.properties]
@@ -75,5 +81,5 @@ final_space = true
   [[blocks.segments]]
     style = 'plain'
     template = '󱓷 '
-    foreground = 'p:blue'
+    foreground = 'p:mauve'
     type = 'text'
